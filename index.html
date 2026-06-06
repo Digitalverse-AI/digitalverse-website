@@ -37,6 +37,8 @@
     "url": "https://www.digitalverse.com.au/",
     "logo": "https://www.digitalverse.com.au/assets/digitalverse_logo_lockup_dark_background_onboard.png",
     "description": "Digitalverse helps growing small businesses establish an AI strategy and implement secure managed intelligence through connected workflows, governed data, controlled agents, monitoring, and compliance.",
+    "email": "hello@digitalverse.com.au",
+    "telephone": "+61494436113",
     "slogan": "Onboard. Scale Up. Transform.",
     "founder": {
       "@type": "Person",
@@ -351,6 +353,22 @@
       flex-wrap: wrap;
       gap: 14px;
       margin-top: 34px;
+    }
+
+    .hero-contact {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .hero-contact a {
+      color: var(--teal);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .hero-contact a:hover {
+      text-decoration: underline;
     }
 
     .signal-band {
@@ -779,6 +797,43 @@
       font-size: 17px;
     }
 
+    .contact-panel {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+      max-width: 720px;
+    }
+
+    .contact-option {
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      color: var(--text);
+      background: rgba(5, 7, 13, 0.34);
+      text-decoration: none;
+      transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+    }
+
+    .contact-option:hover {
+      border-color: rgba(35, 230, 180, 0.52);
+      background: rgba(35, 230, 180, 0.07);
+      transform: translateY(-1px);
+    }
+
+    .contact-option strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .contact-option span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
     .site-footer {
       padding: 36px 0;
       background: #05070d;
@@ -927,7 +982,8 @@
       .cards-grid,
       .method-track,
       .operating-principles,
-      .trust-points {
+      .trust-points,
+      .contact-panel {
         grid-template-columns: 1fr;
       }
 
@@ -961,9 +1017,10 @@
           <li><a href="#front-office">AI Front Office</a></li>
           <li><a href="#method">Method</a></li>
           <li><a href="#trust">Why Digitalverse</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-actions">
-          <a class="btn btn-primary" href="https://singularity-simulator.vercel.app/simulator">Check Your AI Readiness</a>
+          <a class="btn btn-primary" href="https://simulator.digitalverse.com.au">Check Your AI Readiness</a>
           <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
             <span></span>
             <span></span>
@@ -983,9 +1040,15 @@
               Digitalverse helps growing businesses establish a practical AI strategy, then implements it as secure managed intelligence: connected workflows, governed data, controlled agents, and monitored operations that make the business easier to run.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="https://singularity-simulator.vercel.app/simulator">Get Your AI Readiness Score</a>
-              <a class="btn btn-secondary" href="https://singularity-simulator.vercel.app/simulator">See Where AI Fits First</a>
+              <a class="btn btn-primary" href="https://simulator.digitalverse.com.au">Get Your AI Readiness Score</a>
+              <a class="btn btn-secondary" href="https://wa.me/61494436113?text=Hi%20Digitalverse%2C%20I%27m%20interested%20in%20AI%20strategy%20and%20managed%20intelligence%20for%20my%20business." target="_blank" rel="noopener">Ask a Quick Question</a>
             </div>
+            <p class="hero-contact">
+              Not ready for the readiness check? Message us on
+              <a href="https://wa.me/61494436113?text=Hi%20Digitalverse%2C%20I%27m%20interested%20in%20AI%20strategy%20and%20managed%20intelligence%20for%20my%20business." target="_blank" rel="noopener">WhatsApp</a>
+              or email
+              <a href="mailto:hello@digitalverse.com.au?subject=Digitalverse%20AI%20strategy%20enquiry">hello@digitalverse.com.au</a>.
+            </p>
           </div>
         </div>
       </section>
@@ -1105,7 +1168,7 @@
                 The front office is where customers, enquiries, follow-up, bookings, and internal handovers meet. It is usually the fastest place to prove that managed intelligence can make the business more responsive without losing control.
               </p>
               <div class="hero-actions">
-                <a class="btn btn-primary" href="https://singularity-simulator.vercel.app/simulator">Preview Your First Workflow</a>
+                <a class="btn btn-primary" href="https://simulator.digitalverse.com.au">Preview Your First Workflow</a>
               </div>
             </div>
 
@@ -1283,15 +1346,25 @@
         </div>
       </section>
 
-      <section class="cta-band" id="cta">
+      <section class="cta-band" id="contact">
         <div class="container cta-inner">
           <div>
-            <h2>See where managed intelligence could help your business first.</h2>
+            <h2>Start with a readiness check, or just ask a quick question.</h2>
             <p>
-              Answer a few simple questions and get a practical readiness score, a first workflow suggestion, and a clearer view of what your AI strategy could look like.
+              The readiness check gives you a practical score and first workflow suggestion. If you would rather talk to a person first, send a quick WhatsApp message or email Digitalverse directly.
             </p>
+            <div class="contact-panel" aria-label="Contact Digitalverse">
+              <a class="contact-option" href="https://wa.me/61494436113?text=Hi%20Digitalverse%2C%20I%27m%20interested%20in%20AI%20strategy%20and%20managed%20intelligence%20for%20my%20business." target="_blank" rel="noopener">
+                <strong>Message on WhatsApp</strong>
+                <span>Quick questions, easy handoff on mobile.</span>
+              </a>
+              <a class="contact-option" href="mailto:hello@digitalverse.com.au?subject=Digitalverse%20AI%20strategy%20enquiry">
+                <strong>Email Digitalverse</strong>
+                <span>hello@digitalverse.com.au</span>
+              </a>
+            </div>
           </div>
-          <a class="btn btn-primary" href="https://singularity-simulator.vercel.app/simulator">Start the Readiness Check</a>
+          <a class="btn btn-primary" href="https://simulator.digitalverse.com.au">Start the Readiness Check</a>
         </div>
       </section>
     </main>
@@ -1301,7 +1374,9 @@
         <div>Digitalverse Pty Ltd. Onboard. Scale Up. Transform.</div>
         <div class="footer-links">
           <a href="privacy.html">Privacy</a>
-          <a href="https://singularity-simulator.vercel.app/simulator">Start the Readiness Check</a>
+          <a href="mailto:hello@digitalverse.com.au?subject=Digitalverse%20AI%20strategy%20enquiry">hello@digitalverse.com.au</a>
+          <a href="https://wa.me/61494436113?text=Hi%20Digitalverse%2C%20I%27m%20interested%20in%20AI%20strategy%20and%20managed%20intelligence%20for%20my%20business." target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://simulator.digitalverse.com.au">Readiness Check</a>
         </div>
       </div>
     </footer>
