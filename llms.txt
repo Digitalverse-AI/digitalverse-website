@@ -38,6 +38,7 @@ The work combines:
 ## Primary pages
 
 - [Homepage](https://www.digitalverse.com.au/): Digitalverse positioning, managed intelligence overview, AI front office entry point, contact options
+- [AI Readiness Landing Page](https://www.digitalverse.com.au/ai-readiness.html): Focused landing page for small business AI readiness, strategy, secure implementation, contact details, and simulator entry point
 - [Readiness Check](https://simulator.digitalverse.com.au): Interactive readiness simulator and first workflow suggestion
 - [Privacy Notice](https://www.digitalverse.com.au/privacy.html): Interim privacy notice
 
