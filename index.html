@@ -557,6 +557,41 @@
       font-size: 16px;
     }
 
+    .insight-feature {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .insight-image {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+
+    .insight-image img {
+      width: 100%;
+      height: auto;
+      transition: transform 220ms ease;
+    }
+
+    .insight-image:hover img {
+      transform: scale(1.015);
+    }
+
+    .insight-copy .section-title {
+      font-size: 38px;
+    }
+
+    .insight-copy .btn {
+      margin-top: 28px;
+    }
+
     .front-office {
       display: grid;
       grid-template-columns: 0.94fr 1.06fr;
@@ -943,6 +978,7 @@
       .front-office,
       .audience-grid,
       .trust-grid,
+      .insight-feature,
       .accountability-feature,
       .cta-inner {
         grid-template-columns: 1fr;
@@ -1293,6 +1329,24 @@
         </div>
       </section>
 
+      <section class="section" id="insights">
+        <div class="container">
+          <div class="insight-feature">
+            <a class="insight-image" href="constraint-first-ai-agents.html" aria-label="Read AI agents should target bottlenecks, not tasks">
+              <img src="assets/constraint-targeting-headline.png" alt="Digitalverse constraint-first AI agent implementation visual." />
+            </a>
+            <div class="insight-copy">
+              <p class="section-kicker">Implementation insight</p>
+              <h2 class="section-title">AI agents should target bottlenecks, not tasks.</h2>
+              <p class="section-subtitle">
+                A constraint-first approach to deciding where agents belong, what they should improve first, and how implementation compounds without losing control.
+              </p>
+              <a class="btn btn-secondary" href="constraint-first-ai-agents.html">Read the Constraint-First Approach</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="audience">
         <div class="container">
           <p class="section-kicker">Who it is for</p>
@@ -1421,6 +1475,7 @@
         <div class="footer-links">
           <a href="privacy.html">Privacy</a>
           <a href="agent-accountability.html">Accountability</a>
+          <a href="constraint-first-ai-agents.html">Constraint-First AI</a>
           <a href="mailto:hello@digitalverse.com.au?subject=Digitalverse%20AI%20strategy%20enquiry">hello@digitalverse.com.au</a>
           <a href="https://wa.me/61494436113?text=Hi%20Digitalverse%2C%20I%27m%20interested%20in%20AI%20strategy%20and%20managed%20intelligence%20for%20my%20business." target="_blank" rel="noopener">WhatsApp</a>
           <a href="https://simulator.digitalverse.com.au">Readiness Check</a>

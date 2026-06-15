@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Agents Should Target Bottlenecks, Not Tasks | Digitalverse</title>
+  <meta name="description" content="A constraint-first approach to AI agent implementation from Digitalverse. Use agents to find bottlenecks, remove constraints, improve the operating system, and scale safely with governance." />
+  <meta name="keywords" content="constraint-first AI, AI agent implementation, AI agents bottlenecks, Theory of Constraints AI, Amdahl's Law AI, AI governance, managed intelligence, Digitalverse" />
+  <meta name="author" content="Digitalverse" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.digitalverse.com.au/constraint-first-ai-agents.html" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18217007323"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18217007323');
+  </script>
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.digitalverse.com.au/constraint-first-ai-agents.html" />
+  <meta property="og:title" content="AI Agents Should Target Bottlenecks, Not Tasks | Digitalverse" />
+  <meta property="og:description" content="The real opportunity with AI agents is not random automation. It is disciplined constraint removal with governance, oversight, and control." />
+  <meta property="og:site_name" content="Digitalverse" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:image" content="https://www.digitalverse.com.au/assets/constraint-targeting-headline.png" />
+  <meta property="og:image:alt" content="Digitalverse constraint-first AI agent implementation visual." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Agents Should Target Bottlenecks, Not Tasks | Digitalverse" />
+  <meta name="twitter:description" content="A constraint-first approach to deciding where AI agents should create value first." />
+  <meta name="twitter:image" content="https://www.digitalverse.com.au/assets/constraint-targeting-headline.png" />
+  <meta name="twitter:image:alt" content="Digitalverse constraint-first AI agent implementation visual." />
+
+  <link rel="icon" type="image/png" href="assets/digitalverse_logo_icon_transparent_onboard.png" />
+  <link rel="apple-touch-icon" href="assets/digitalverse_logo_icon_transparent_onboard.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Agents Should Target Bottlenecks, Not Tasks",
+    "description": "A constraint-first approach to AI agent implementation, focused on bottleneck removal, governance, and managed intelligence.",
+    "datePublished": "2026-06-16",
+    "dateModified": "2026-06-16",
+    "author": {
+      "@type": "Organization",
+      "name": "Digitalverse"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Digitalverse",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.digitalverse.com.au/assets/digitalverse_logo_lockup_dark_background_onboard.png"
+      }
+    },
+    "image": [
+      "https://www.digitalverse.com.au/assets/constraint-targeting-headline.png",
+      "https://www.digitalverse.com.au/assets/constraint-first-ai-loop.png"
+    ],
+    "mainEntityOfPage": "https://www.digitalverse.com.au/constraint-first-ai-agents.html"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      color-scheme: dark;
+      --ink: #05070d;
+      --navy: #080d16;
+      --panel: #0d151f;
+      --panel-2: #121b26;
+      --line: rgba(142, 160, 184, 0.22);
+      --line-strong: rgba(35, 230, 180, 0.38);
+      --text: #f5f7fa;
+      --muted: #a7b4c6;
+      --soft: #dbe4ef;
+      --cyan: #00b7ff;
+      --teal: #23e6b4;
+      --violet: #bb46ff;
+      --blue: #326bff;
+      --amber: #f4c95d;
+      --radius: 8px;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--ink);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    .page-shell {
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255,255,255,0.018) 1px, transparent 1px),
+        var(--ink);
+      background-size: 52px 52px, 52px 52px, auto;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .container-narrow {
+      width: min(820px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 50;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(5, 7, 13, 0.84);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 218px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 44px;
+      padding: 12px 20px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      font-size: 15px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      white-space: normal;
+      cursor: pointer;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: #031019;
+      background: linear-gradient(135deg, var(--teal), var(--cyan));
+      box-shadow: 0 14px 34px rgba(0, 183, 255, 0.18);
+    }
+
+    .btn-primary:hover {
+      color: #031019;
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(255,255,255,0.045);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(35, 230, 180, 0.48);
+      color: var(--teal);
+      background: rgba(35, 230, 180, 0.06);
+    }
+
+    .section-kicker {
+      margin: 0 0 14px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .article-hero {
+      padding: 124px 0 64px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background:
+        radial-gradient(circle at 78% 8%, rgba(0, 183, 255, 0.18), transparent 28%),
+        radial-gradient(circle at 18% 28%, rgba(187, 70, 255, 0.14), transparent 30%),
+        #05070d;
+    }
+
+    .article-hero-grid {
+      display: grid;
+      grid-template-columns: 0.74fr 1.26fr;
+      gap: 38px;
+      align-items: end;
+    }
+
+    .article-hero-copy h1 {
+      margin: 0;
+      font-size: 54px;
+      line-height: 1.02;
+      font-weight: 950;
+      text-wrap: balance;
+    }
+
+    .article-hero-copy p {
+      margin: 22px 0 0;
+      color: var(--soft);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .article-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      border: 1px solid rgba(142, 160, 184, 0.2);
+      border-radius: 999px;
+      padding: 5px 11px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .headline-visual {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .headline-visual img {
+      width: 100%;
+      height: auto;
+    }
+
+    .article-body {
+      padding: 78px 0;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 58px;
+      align-items: start;
+    }
+
+    .article-content {
+      max-width: 790px;
+    }
+
+    .article-content h2 {
+      margin: 54px 0 16px;
+      font-size: 34px;
+      line-height: 1.14;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content p {
+      margin: 0 0 22px;
+      color: var(--soft);
+      font-size: 20px;
+      line-height: 1.68;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 26px;
+      line-height: 1.42;
+      font-weight: 750;
+      text-wrap: balance;
+    }
+
+    .question-block {
+      display: grid;
+      gap: 14px;
+      margin: 34px 0;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(18, 27, 38, 0.9), rgba(8, 13, 22, 0.94));
+    }
+
+    .question-block p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .question-block strong {
+      display: block;
+      color: var(--text);
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .plain-english {
+      margin: 32px 0;
+      border-left: 4px solid var(--teal);
+      padding: 10px 0 10px 22px;
+    }
+
+    .plain-english p {
+      margin: 0;
+      color: var(--text);
+      font-size: 25px;
+      line-height: 1.34;
+      font-weight: 850;
+    }
+
+    .constraint-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 30px 0 34px;
+    }
+
+    .constraint-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      color: var(--soft);
+      background: rgba(13, 21, 31, 0.74);
+      font-weight: 750;
+    }
+
+    .cycle-section {
+      padding: 78px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #08101a;
+    }
+
+    .cycle-grid {
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .cycle-copy h2 {
+      margin: 0;
+      font-size: 44px;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+
+    .cycle-copy p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .cycle-steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .cycle-step {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .cycle-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      color: #031019;
+      background: linear-gradient(135deg, var(--teal), var(--cyan));
+      font-weight: 950;
+    }
+
+    .cycle-step strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    .cycle-step span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cycle-visual {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .cycle-visual img {
+      width: 100%;
+      height: auto;
+    }
+
+    .aside-panel {
+      position: sticky;
+      top: 104px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: rgba(13, 21, 31, 0.82);
+      box-shadow: var(--shadow);
+    }
+
+    .aside-panel h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .aside-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .aside-list {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--soft);
+      font-size: 14px;
+    }
+
+    .aside-list li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .aside-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .cta-band {
+      position: relative;
+      overflow: hidden;
+      padding: 82px 0;
+      background:
+        linear-gradient(135deg, rgba(35, 230, 180, 0.12), rgba(0, 183, 255, 0.10)),
+        #08101a;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .cta-inner h2 {
+      margin: 0;
+      max-width: 760px;
+      font-size: 42px;
+      line-height: 1.08;
+    }
+
+    .cta-inner p {
+      margin: 16px 0 0;
+      max-width: 700px;
+      color: var(--soft);
+      font-size: 17px;
+    }
+
+    .site-footer {
+      padding: 36px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: #05070d;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 980px) {
+      .nav-links,
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .site-header.menu-active .nav-links {
+        position: fixed;
+        top: 74px;
+        left: 0;
+        right: 0;
+        display: grid;
+        gap: 0;
+        padding: 18px 24px 28px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(5, 7, 13, 0.98);
+      }
+
+      .site-header.menu-active .nav-links a {
+        display: block;
+        padding: 14px 0;
+        font-size: 18px;
+      }
+
+      .article-hero-grid,
+      .article-layout,
+      .cycle-grid,
+      .cta-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .article-hero-copy h1 {
+        font-size: 46px;
+      }
+
+      .aside-panel {
+        position: static;
+      }
+
+      .cycle-copy h2,
+      .cta-inner h2 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container,
+      .container-narrow {
+        width: min(100% - 32px, 1160px);
+      }
+
+      .brand img {
+        width: 188px;
+      }
+
+      .article-hero {
+        padding: 112px 0 44px;
+      }
+
+      .article-hero-copy h1 {
+        font-size: 36px;
+      }
+
+      .article-hero-copy p,
+      .article-content p {
+        font-size: 17px;
+      }
+
+      .article-content .lead,
+      .plain-english p {
+        font-size: 22px;
+      }
+
+      .article-body,
+      .cycle-section {
+        padding: 58px 0;
+      }
+
+      .article-content h2 {
+        font-size: 29px;
+      }
+
+      .constraint-list {
+        grid-template-columns: 1fr;
+      }
+
+      .cycle-copy h2,
+      .cta-inner h2 {
+        font-size: 31px;
+      }
+
+      .cta-inner .btn,
+      .nav-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" id="siteHeader">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a href="/" class="brand" aria-label="Digitalverse home">
+          <img src="assets/digitalverse_logo_lockup_transparent_onboard.png" alt="Digitalverse - Onboard. Scale Up. Transform." />
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#offers">What We Build</a></li>
+          <li><a href="agent-accountability.html">Accountability</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="https://simulator.digitalverse.com.au">Check Your AI Readiness</a>
+          <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="article-hero" aria-labelledby="article-title">
+        <div class="container">
+          <div class="article-hero-grid">
+            <div class="article-hero-copy">
+              <p class="section-kicker">Constraint-first AI</p>
+              <h1 id="article-title">AI agents should target bottlenecks, not tasks.</h1>
+              <p>
+                A practical way to decide where agents belong, what they should do first, and how the advantage compounds without losing control.
+              </p>
+              <div class="article-meta" aria-label="Article details">
+                <span>Digitalverse insight</span>
+                <span>AI agent implementation</span>
+                <span>2026</span>
+              </div>
+            </div>
+            <figure class="headline-visual">
+              <img src="assets/constraint-targeting-headline.png" alt="Digitalverse visual showing a robotic manufacturing line and a constraint removal sequence for AI agent implementation." />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-body">
+        <div class="container article-layout">
+          <article class="article-content">
+            <p class="lead">
+              AI agent implementation should not begin with a catalogue of tasks. It should begin with the operating constraint that is limiting the business.
+            </p>
+
+            <div class="question-block" aria-label="Implementation questions">
+              <p>Do not start with:</p>
+              <strong>"What can we automate?"</strong>
+              <p>Start with:</p>
+              <strong>"What is constraining the system?"</strong>
+            </div>
+
+            <p>
+              We were recently thinking about Amdahl's Law after hearing it discussed by Peter Diamandis and the Moonshots team.
+            </p>
+            <p>
+              The idea is simple but powerful: improving one part of a system only improves the whole system in proportion to how much that part actually limits total performance.
+            </p>
+
+            <div class="plain-english">
+              <p>You cannot outrun your bottleneck.</p>
+            </div>
+
+            <p>
+              That connects directly with the Theory of Constraints, popularised by Eliyahu Goldratt in <em>The Goal</em>.
+            </p>
+            <p>
+              Every business system has a constraint. The constraint is the part of the operation that limits the performance of the whole.
+            </p>
+
+            <div class="constraint-list" aria-label="Common business constraints">
+              <div class="constraint-item">Quoting</div>
+              <div class="constraint-item">Customer follow-up</div>
+              <div class="constraint-item">Scheduling</div>
+              <div class="constraint-item">Approvals</div>
+              <div class="constraint-item">Handoffs</div>
+              <div class="constraint-item">Knowledge trapped inside key people</div>
+            </div>
+
+            <p>
+              The job is to find the most constrained process, decision point, or handoff, then focus on clearing it.
+            </p>
+            <p>
+              Once that bottleneck is removed, the constraint moves. Then you reassess. Then you improve the next one.
+            </p>
+          </article>
+
+          <aside class="aside-panel" aria-labelledby="aside-title">
+            <h2 id="aside-title">The implementation test</h2>
+            <p>
+              A good AI agent use case should explain which constraint it removes, how control is maintained, and what the business can do faster after the change.
+            </p>
+            <ul class="aside-list">
+              <li>Find the constraint.</li>
+              <li>Remove it with agents where appropriate.</li>
+              <li>Keep humans accountable for high-impact decisions.</li>
+              <li>Measure what changed.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="cycle-section" aria-labelledby="loop-title">
+        <div class="container cycle-grid">
+          <div class="cycle-copy">
+            <p class="section-kicker">The operating loop</p>
+            <h2 id="loop-title">Constraint removal is the disciplined loop for agent implementation.</h2>
+            <p>
+              This is how Digitalverse believes AI agents should be introduced: not as random automation, and not as "sprinkle AI everywhere", but as a focused operating loop.
+            </p>
+            <div class="cycle-steps" aria-label="Constraint-first AI loop">
+              <div class="cycle-step">
+                <span class="cycle-num">1</span>
+                <div>
+                  <strong>Find the constraint</strong>
+                  <span>Identify the process, decision point, or handoff creating the most friction.</span>
+                </div>
+              </div>
+              <div class="cycle-step">
+                <span class="cycle-num">2</span>
+                <div>
+                  <strong>Resolve with AI agents</strong>
+                  <span>Streamline, automate, or reimagine the work to remove the bottleneck.</span>
+                </div>
+              </div>
+              <div class="cycle-step">
+                <span class="cycle-num">3</span>
+                <div>
+                  <strong>Learn from the implementation</strong>
+                  <span>Capture what worked, what did not, and why.</span>
+                </div>
+              </div>
+              <div class="cycle-step">
+                <span class="cycle-num">4</span>
+                <div>
+                  <strong>Reassess the system</strong>
+                  <span>The bottleneck has moved. Find the next one.</span>
+                </div>
+              </div>
+              <div class="cycle-step">
+                <span class="cycle-num">5</span>
+                <div>
+                  <strong>Repeat</strong>
+                  <span>Each pass improves cycle time and compounds organisational learning.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <figure class="cycle-visual">
+            <img src="assets/constraint-first-ai-loop.png" alt="Digitalverse five-step loop for constraint-first AI: identify the constraint, resolve with AI agents, learn and improve, reassess the system, and repeat." />
+          </figure>
+        </div>
+      </section>
+
+      <section class="article-body">
+        <div class="container-narrow article-content">
+          <h2>The real opportunity is constraint removal.</h2>
+          <p>
+            The real opportunity with AI agents is not just task automation. It is constraint removal.
+          </p>
+          <p>
+            Each pass improves cycle time, builds organisational learning, and makes the next implementation sharper.
+          </p>
+          <p>
+            But speed without control creates risk. That is why the governance layer matters: decision rights, human oversight, auditability, data boundaries, and clear controls.
+          </p>
+          <p>
+            AI agents can make a business faster. The real work is making sure they make the right parts faster, safely.
+          </p>
+          <p>
+            That is where the advantage compounds.
+          </p>
+        </div>
+      </section>
+
+      <section class="cta-band" id="contact">
+        <div class="container cta-inner">
+          <div>
+            <h2>Find the first useful constraint to remove.</h2>
+            <p>
+              Start with the readiness check, or talk to Digitalverse about turning a real operational bottleneck into a secure managed intelligence workflow.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="https://simulator.digitalverse.com.au">Check Your AI Readiness</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>Digitalverse Pty Ltd. Onboard. Scale Up. Transform.</div>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="agent-accountability.html">Accountability</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="mailto:hello@digitalverse.com.au?subject=Digitalverse%20constraint-first%20AI%20enquiry">hello@digitalverse.com.au</a>
+          <a href="https://simulator.digitalverse.com.au">Readiness Check</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const header = document.getElementById("siteHeader");
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (toggle && header && navLinks) {
+      toggle.addEventListener("click", () => {
+        const isOpen = header.classList.toggle("menu-active");
+        document.body.classList.toggle("menu-open", isOpen);
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          header.classList.remove("menu-active");
+          document.body.classList.remove("menu-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+  </script>
+</body>
+</html>
