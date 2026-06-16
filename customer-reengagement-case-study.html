@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Re-engagement Case Study | Digitalverse</title>
+  <meta name="description" content="A Digitalverse customer story showing how a regional retailer used a managed intelligence stack to clean customer data, shape an SMS re-engagement campaign, manage opt-outs, and increase customer activity during a quiet trading period." />
+  <meta name="keywords" content="AI customer re-engagement, SMS campaign AI agent, small business customer database, managed intelligence case study, AI agent retail, Digitalverse customer story" />
+  <meta name="author" content="Digitalverse" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.digitalverse.com.au/customer-reengagement-case-study.html" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18217007323"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18217007323');
+  </script>
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.digitalverse.com.au/customer-reengagement-case-study.html" />
+  <meta property="og:title" content="Customer Re-engagement Case Study | Digitalverse" />
+  <meta property="og:description" content="How a regional retail business reconnected with existing customers using clean data, smart messaging, responsible delivery, and a managed AI Agent workflow." />
+  <meta property="og:site_name" content="Digitalverse" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:image" content="https://www.digitalverse.com.au/assets/customer-reengagement-case-study.png" />
+  <meta property="og:image:alt" content="Digitalverse customer story visual showing customer data moving through an AI Agent into personalised SMS outreach and increased local store traffic." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Customer Re-engagement Case Study | Digitalverse" />
+  <meta name="twitter:description" content="A practical Digitalverse customer story about using managed intelligence to turn dormant customer data into renewed store activity." />
+  <meta name="twitter:image" content="https://www.digitalverse.com.au/assets/customer-reengagement-case-study.png" />
+  <meta name="twitter:image:alt" content="Digitalverse customer story visual showing an AI Agent customer re-engagement workflow." />
+
+  <link rel="icon" type="image/png" href="assets/digitalverse_logo_icon_transparent_onboard.png" />
+  <link rel="apple-touch-icon" href="assets/digitalverse_logo_icon_transparent_onboard.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Re-engaging Customers During a Quiet Trading Period",
+    "description": "A Digitalverse customer story showing how a regional retailer used a managed intelligence stack to clean customer data, shape an SMS re-engagement campaign, manage opt-outs, and increase customer activity.",
+    "datePublished": "2026-06-16",
+    "dateModified": "2026-06-16",
+    "author": {
+      "@type": "Organization",
+      "name": "Digitalverse"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Digitalverse",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.digitalverse.com.au/assets/digitalverse_logo_lockup_dark_background_onboard.png"
+      }
+    },
+    "image": "https://www.digitalverse.com.au/assets/customer-reengagement-case-study.png",
+    "mainEntityOfPage": "https://www.digitalverse.com.au/customer-reengagement-case-study.html",
+    "genre": "Case study"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      color-scheme: dark;
+      --ink: #05070d;
+      --navy: #080d16;
+      --panel: #0d151f;
+      --panel-2: #121b26;
+      --line: rgba(142, 160, 184, 0.22);
+      --line-strong: rgba(35, 230, 180, 0.38);
+      --text: #f5f7fa;
+      --muted: #a7b4c6;
+      --soft: #dbe4ef;
+      --cyan: #00b7ff;
+      --teal: #23e6b4;
+      --violet: #bb46ff;
+      --blue: #326bff;
+      --amber: #f4c95d;
+      --radius: 8px;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--ink);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    figure,
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    .page-shell {
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255,255,255,0.018) 1px, transparent 1px),
+        var(--ink);
+      background-size: 52px 52px, 52px 52px, auto;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .container-narrow {
+      width: min(880px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 50;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(5, 7, 13, 0.84);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 218px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--text);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 44px;
+      padding: 12px 20px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      font-size: 15px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      white-space: normal;
+      cursor: pointer;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: #031019;
+      background: linear-gradient(135deg, var(--teal), var(--cyan));
+      box-shadow: 0 14px 34px rgba(0, 183, 255, 0.18);
+    }
+
+    .btn-primary:hover {
+      color: #031019;
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(255,255,255,0.045);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(35, 230, 180, 0.48);
+      color: var(--teal);
+      background: rgba(35, 230, 180, 0.06);
+    }
+
+    .section-kicker {
+      margin: 0 0 14px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .case-hero {
+      padding: 124px 0 64px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background:
+        linear-gradient(135deg, rgba(8, 13, 22, 0.98), rgba(8, 13, 22, 0.88) 54%, rgba(13, 21, 31, 0.96)),
+        #05070d;
+    }
+
+    .case-hero-grid {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .case-hero-copy h1 {
+      font-size: 56px;
+      line-height: 1.02;
+      font-weight: 950;
+      text-wrap: balance;
+    }
+
+    .case-hero-copy p {
+      margin-top: 22px;
+      color: var(--soft);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .article-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      border: 1px solid rgba(142, 160, 184, 0.2);
+      border-radius: 999px;
+      padding: 5px 11px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .case-visual {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .case-visual img {
+      width: 100%;
+      height: auto;
+    }
+
+    .case-summary {
+      padding: 34px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #08101a;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--line);
+    }
+
+    .summary-item {
+      min-height: 132px;
+      padding: 22px;
+      background: rgba(13, 21, 31, 0.94);
+    }
+
+    .summary-item strong {
+      display: block;
+      color: var(--text);
+      font-size: 24px;
+      line-height: 1.15;
+    }
+
+    .summary-item span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .article-body {
+      padding: 76px 0;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 58px;
+      align-items: start;
+    }
+
+    .article-content {
+      max-width: 790px;
+    }
+
+    .article-content h2 {
+      margin: 54px 0 16px;
+      font-size: 34px;
+      line-height: 1.14;
+      text-wrap: balance;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content p {
+      margin: 0 0 22px;
+      color: var(--soft);
+      font-size: 20px;
+      line-height: 1.68;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 26px;
+      line-height: 1.42;
+      font-weight: 750;
+      text-wrap: balance;
+    }
+
+    .aside-panel {
+      position: sticky;
+      top: 104px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: rgba(13, 21, 31, 0.86);
+      box-shadow: var(--shadow);
+    }
+
+    .aside-panel h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .aside-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .aside-list {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--soft);
+      font-size: 14px;
+    }
+
+    .aside-list li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .aside-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .stage-section {
+      padding: 78px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #08101a;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+      font-size: 44px;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+
+    .section-heading p {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .stage-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .stage-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: rgba(13, 21, 31, 0.88);
+    }
+
+    .stage-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      color: #031019;
+      background: linear-gradient(135deg, var(--teal), var(--cyan));
+      font-weight: 950;
+    }
+
+    .stage-card h3 {
+      font-size: 22px;
+      line-height: 1.18;
+    }
+
+    .stage-card p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .quote-band {
+      padding: 72px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background:
+        linear-gradient(135deg, rgba(35, 230, 180, 0.12), rgba(187, 70, 255, 0.10)),
+        #05070d;
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.64fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    blockquote {
+      margin: 0;
+      color: var(--text);
+      font-size: 34px;
+      line-height: 1.26;
+      font-weight: 850;
+      text-wrap: balance;
+    }
+
+    .quote-note {
+      color: var(--soft);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .opportunity-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 30px 0 34px;
+    }
+
+    .opportunity-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      color: var(--soft);
+      background: rgba(13, 21, 31, 0.74);
+      font-weight: 750;
+    }
+
+    .cta-band {
+      position: relative;
+      overflow: hidden;
+      padding: 82px 0;
+      background:
+        linear-gradient(135deg, rgba(35, 230, 180, 0.12), rgba(0, 183, 255, 0.10)),
+        #08101a;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .cta-inner h2 {
+      max-width: 760px;
+      font-size: 42px;
+      line-height: 1.08;
+    }
+
+    .cta-inner p {
+      margin-top: 16px;
+      max-width: 700px;
+      color: var(--soft);
+      font-size: 17px;
+    }
+
+    .site-footer {
+      padding: 36px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: #05070d;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 1040px) {
+      .stage-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      .nav-links,
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .site-header.menu-active .nav-links {
+        position: fixed;
+        top: 74px;
+        left: 0;
+        right: 0;
+        display: grid;
+        gap: 0;
+        padding: 18px 24px 28px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(5, 7, 13, 0.98);
+      }
+
+      .site-header.menu-active .nav-links a {
+        display: block;
+        padding: 14px 0;
+        font-size: 18px;
+      }
+
+      .case-hero-grid,
+      .article-layout,
+      .quote-grid,
+      .cta-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .case-hero-copy h1 {
+        font-size: 46px;
+      }
+
+      .aside-panel {
+        position: static;
+      }
+
+      .section-heading h2,
+      .cta-inner h2 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container,
+      .container-narrow {
+        width: min(100% - 32px, 1160px);
+      }
+
+      .brand img {
+        width: 188px;
+      }
+
+      .case-hero {
+        padding: 112px 0 44px;
+      }
+
+      .case-hero-copy h1 {
+        font-size: 36px;
+      }
+
+      .case-hero-copy p,
+      .article-content p {
+        font-size: 17px;
+      }
+
+      .article-content .lead {
+        font-size: 22px;
+      }
+
+      .article-body,
+      .stage-section,
+      .quote-band {
+        padding: 58px 0;
+      }
+
+      .article-content h2 {
+        font-size: 29px;
+      }
+
+      .summary-grid,
+      .stage-grid,
+      .opportunity-list {
+        grid-template-columns: 1fr;
+      }
+
+      blockquote {
+        font-size: 26px;
+      }
+
+      .section-heading h2,
+      .cta-inner h2 {
+        font-size: 31px;
+      }
+
+      .cta-inner .btn,
+      .nav-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" id="siteHeader">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a href="/" class="brand" aria-label="Digitalverse home">
+          <img src="assets/digitalverse_logo_lockup_transparent_onboard.png" alt="Digitalverse - Onboard. Scale Up. Transform." />
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#offers">What We Build</a></li>
+          <li><a href="agent-accountability.html">Accountability</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="https://simulator.digitalverse.com.au">Check Your AI Readiness</a>
+          <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="case-hero" aria-labelledby="case-title">
+        <div class="container">
+          <div class="case-hero-grid">
+            <div class="case-hero-copy">
+              <p class="section-kicker">Customer story</p>
+              <h1 id="case-title">Re-engaging customers during a quiet trading period.</h1>
+              <p>
+                When a regional retail business saw revenue fall more than 70% below normal trading levels, Digitalverse helped turn years of dormant customer data into a responsible, staged customer re-engagement workflow.
+              </p>
+              <div class="article-meta" aria-label="Case study details">
+                <span>Regional retail</span>
+                <span>Customer data</span>
+                <span>SMS outreach</span>
+                <span>Managed intelligence</span>
+              </div>
+            </div>
+            <figure class="case-visual">
+              <img src="assets/customer-reengagement-case-study.png" alt="Digitalverse customer story visual showing customer data moving through an AI Agent into personalised SMS outreach, customer returns, and increased foot traffic and sales." />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-summary" aria-label="Case study summary">
+        <div class="container summary-grid">
+          <div class="summary-item">
+            <strong>70%+</strong>
+            <span>Revenue decline compared with normal trading levels before the campaign.</span>
+          </div>
+          <div class="summary-item">
+            <strong>Clean data</strong>
+            <span>Duplicate and inconsistent customer records prepared for practical outreach.</span>
+          </div>
+          <div class="summary-item">
+            <strong>Staged delivery</strong>
+            <span>Messages sent in controlled batches with capacity and opt-outs managed.</span>
+          </div>
+          <div class="summary-item">
+            <strong>Local choice</strong>
+            <span>Customer feedback showed the message influenced a purchase decision.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-body">
+        <div class="container article-layout">
+          <article class="article-content">
+            <p class="lead">
+              The opportunity was not another piece of software. It was the untapped value sitting inside the customer database the business already owned.
+            </p>
+
+            <h2>The customer challenge</h2>
+            <p>
+              A regional retail business was moving through a quiet trading period, with customer traffic and sales materially below normal levels. Management knew there was value in reconnecting with past customers, but executing a useful campaign manually would have required substantial effort.
+            </p>
+            <p>
+              The business had accumulated customer records over many years. Like many practical operating databases, the export contained duplicate entries, inconsistent formatting, and outdated contact information. Before any customer communication could happen responsibly, the data needed to be prepared.
+            </p>
+
+            <h2>The Digitalverse approach</h2>
+            <p>
+              Using a managed Digitalverse Intelligence Stack, the business engaged its AI Agent to help design and coordinate a customer re-engagement campaign. The agent worked alongside the business owner, turning a rough customer export into a clean list, then shaping an offer and SMS message that felt local, relevant, and on-brand.
+            </p>
+            <p>
+              The campaign was not sent to the entire database at once. It was staged across manageable batches so the store could handle increased customer activity, monitor responses, and keep suppression lists updated for future communication.
+            </p>
+          </article>
+
+          <aside class="aside-panel" aria-labelledby="aside-title">
+            <h2 id="aside-title">What made it work</h2>
+            <p>
+              The agent was useful because it handled the operational detail around a real business outcome, not because it simply generated campaign copy.
+            </p>
+            <ul class="aside-list">
+              <li>Customer data cleaned before use.</li>
+              <li>Offer and SMS copy reviewed by the owner.</li>
+              <li>Rollout staged around store capacity.</li>
+              <li>STOP responses and suppression lists managed.</li>
+              <li>Delivery and response activity monitored.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="stage-section" id="approach" aria-labelledby="approach-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Four-stage workflow</p>
+            <h2 id="approach-title">From raw customer data to responsible outreach.</h2>
+            <p>
+              The work combined data preparation, campaign development, operational controls, and monitoring so the business could reconnect with customers without overwhelming the team.
+            </p>
+          </div>
+
+          <div class="stage-grid">
+            <article class="stage-card">
+              <span class="stage-num">1</span>
+              <h3>Data preparation</h3>
+              <p>
+                The AI Agent identified duplicates, standardised customer information, validated data quality, and prepared the list for outreach.
+              </p>
+            </article>
+
+            <article class="stage-card">
+              <span class="stage-num">2</span>
+              <h3>Campaign development</h3>
+              <p>
+                The Agent helped generate promotional concepts, draft SMS content, refine tone, and create message variants for review.
+              </p>
+            </article>
+
+            <article class="stage-card">
+              <span class="stage-num">3</span>
+              <h3>Responsible execution</h3>
+              <p>
+                Customer lists were segmented into batches, messages were distributed over multiple days, and store capacity was considered.
+              </p>
+            </article>
+
+            <article class="stage-card">
+              <span class="stage-num">4</span>
+              <h3>Results monitoring</h3>
+              <p>
+                Delivery outcomes and customer responses were tracked, with opt-out requests processed and suppression lists updated.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-body" id="outcomes">
+        <div class="container-narrow article-content">
+          <h2>The outcome</h2>
+          <p>
+            The campaign generated a measurable increase in customer foot traffic and sales during the campaign period. Just as importantly, the business received direct customer feedback showing the communication had influenced a real purchase decision.
+          </p>
+          <p>
+            One customer advised that they had intended to buy from a major national retailer, but chose to support the local business after receiving the message.
+          </p>
+          <p>
+            Every business and campaign is different. The useful lesson is that timely, responsible engagement with existing customers can unlock practical value when the data, messaging, delivery controls, and follow-up are handled as one managed workflow.
+          </p>
+        </div>
+      </section>
+
+      <section class="quote-band" aria-label="Customer feedback">
+        <div class="container quote-grid">
+          <blockquote>
+            "I was going to buy from a big retailer, but I decided to come in and support a local business instead."
+          </blockquote>
+          <p class="quote-note">
+            Real feedback from a customer. Real impact for a local business. The message did not just create activity; it helped redirect a purchase back into the local store.
+          </p>
+        </div>
+      </section>
+
+      <section class="article-body">
+        <div class="container-narrow article-content">
+          <h2>Why this matters</h2>
+          <p>
+            This example shows that AI Agents are not limited to answering questions or generating content. In the right managed intelligence stack, they can support complete business workflows.
+          </p>
+          <div class="opportunity-list" aria-label="Managed intelligence capabilities">
+            <div class="opportunity-item">Clean and organise business data</div>
+            <div class="opportunity-item">Develop customer engagement campaigns</div>
+            <div class="opportunity-item">Execute communications at scale</div>
+            <div class="opportunity-item">Manage customer preferences responsibly</div>
+            <div class="opportunity-item">Provide operational oversight</div>
+            <div class="opportunity-item">Turn existing systems into growth opportunities</div>
+          </div>
+          <p>
+            For small and medium businesses, the opportunity is often not acquiring more software. It is unlocking more value from the customers, data, and systems they already have.
+          </p>
+        </div>
+      </section>
+
+      <section class="cta-band" id="contact">
+        <div class="container cta-inner">
+          <div>
+            <h2>See what is possible for your business.</h2>
+            <p>
+              Talk to Digitalverse about what your business could achieve with an AI Agent working alongside your team, your customer data, and your existing systems.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/61494436113?text=Hi%20Digitalverse%2C%20I%27d%20like%20to%20talk%20about%20a%20customer%20re-engagement%20workflow%20for%20my%20business." target="_blank" rel="noopener">Talk to Digitalverse</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>Digitalverse Pty Ltd. Onboard. Scale Up. Transform.</div>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="agent-accountability.html">Accountability</a>
+          <a href="constraint-first-ai-agents.html">Constraint-First AI</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="mailto:hello@digitalverse.com.au?subject=Digitalverse%20customer%20re-engagement%20enquiry">hello@digitalverse.com.au</a>
+          <a href="https://simulator.digitalverse.com.au">Readiness Check</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const header = document.getElementById("siteHeader");
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (toggle && header && navLinks) {
+      toggle.addEventListener("click", () => {
+        const isOpen = header.classList.toggle("menu-active");
+        document.body.classList.toggle("menu-open", isOpen);
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          header.classList.remove("menu-active");
+          document.body.classList.remove("menu-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -38,6 +38,7 @@ The work combines:
 - Digitalverse focuses on human-supervised managed intelligence, governance, control, compliance, and secure implementation.
 - Digitalverse provides an AI agent accountability framework covering named owners, authority boundaries, agent identities, human approvals, monitoring, audit logs, and counterparty-ready records.
 - Digitalverse believes AI agents should target bottlenecks and operating constraints before individual tasks, using a loop of constraint identification, agent-enabled resolution, learning, reassessment, and repetition.
+- Digitalverse has a customer re-engagement case study showing how a regional retail business used a managed intelligence stack to clean customer data, develop SMS messaging, stage delivery, manage opt-outs, monitor responses, and increase customer activity during a quiet trading period.
 
 ## Primary pages
 
@@ -45,6 +46,7 @@ The work combines:
 - [AI Readiness Landing Page](https://www.digitalverse.com.au/ai-readiness.html): Focused landing page for small business AI readiness, strategy, secure implementation, contact details, and simulator entry point
 - [AI Agent Accountability Framework](https://www.digitalverse.com.au/agent-accountability.html): Digitalverse framework for accountable agent deployment, including system controls, security, agent governance, identities and secrets, human approval boundaries, and continuous oversight
 - [Constraint-First AI Agents](https://www.digitalverse.com.au/constraint-first-ai-agents.html): Digitalverse implementation insight explaining why AI agents should target bottlenecks rather than isolated tasks, drawing on Amdahl's Law and the Theory of Constraints
+- [Customer Re-engagement Case Study](https://www.digitalverse.com.au/customer-reengagement-case-study.html): Customer story showing a regional retailer re-engaging existing customers through cleaned data, responsible SMS outreach, managed opt-outs, and monitored campaign outcomes
 - [Readiness Check](https://simulator.digitalverse.com.au): Interactive readiness simulator and first workflow suggestion
 - [Privacy Notice](https://www.digitalverse.com.au/privacy.html): Interim privacy notice
 
