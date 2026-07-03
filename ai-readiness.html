@@ -403,24 +403,7 @@
 
     .split {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 46px;
-      align-items: center;
-    }
-
-    .founder-photo {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--panel);
-      aspect-ratio: 4 / 5;
-    }
-
-    .founder-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 22%;
+      max-width: 880px;
     }
 
     .copy-stack {
@@ -550,13 +533,6 @@
         grid-template-columns: 1fr;
       }
 
-      .split {
-        gap: 28px;
-      }
-
-      .founder-photo {
-        max-width: 440px;
-      }
     }
 
     @media (max-width: 620px) {
@@ -629,7 +605,7 @@
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="https://simulator.digitalverse.com.au/?utm_source=chatgpt&amp;utm_medium=paid&amp;utm_campaign=ai_readiness&amp;utm_content=hero_primary" data-simulator-link data-utm-content="hero_primary">Start the Readiness Check</a>
-              <a class="btn btn-secondary" href="https://wa.me/61494436113?text=Hi%20Digitalverse%2C%20I%27m%20interested%20in%20the%20AI%20readiness%20check%20for%20my%20business." target="_blank" rel="noopener">Ask Simon a Question</a>
+              <a class="btn btn-secondary" href="https://wa.me/61494436113?text=Hi%20Digitalverse%2C%20I%27m%20interested%20in%20the%20AI%20readiness%20check%20for%20my%20business." target="_blank" rel="noopener">Ask a Question</a>
             </div>
             <p class="microcopy">Usually takes around 4 minutes. No pressure, no jargon, and no need to know exactly what you want yet.</p>
           </div>
@@ -695,9 +671,6 @@
               <div class="fit-item">You want a clear AI strategy before buying another disconnected tool.</div>
             </div>
           </div>
-          <figure class="founder-photo">
-            <img src="assets/IMG_0130.jpeg" alt="Simon De Greyte, founder of Digitalverse" />
-          </figure>
         </div>
       </section>
 

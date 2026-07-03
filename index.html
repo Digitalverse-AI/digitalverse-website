@@ -50,10 +50,6 @@
     "email": "hello@digitalverse.com.au",
     "telephone": "+61494436113",
     "slogan": "Onboard. Scale Up. Transform.",
-    "founder": {
-      "@type": "Person",
-      "name": "Simon De Greyte"
-    },
     "areaServed": [
       { "@type": "Country", "name": "Australia" },
       { "@type": "AdministrativeArea", "name": "New South Wales" },
@@ -753,25 +749,9 @@
 
     .trust-grid {
       display: grid;
-      grid-template-columns: 0.88fr 1.12fr;
-      gap: 54px;
-      align-items: center;
+      gap: 36px;
       margin-top: 42px;
-    }
-
-    .portrait {
-      overflow: hidden;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: var(--panel);
-      box-shadow: var(--shadow);
-    }
-
-    .portrait img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center top;
+      max-width: 980px;
     }
 
     .trust-copy {
@@ -1402,9 +1382,6 @@
           <h2 class="section-title">Local business empathy. Enterprise delivery discipline.</h2>
 
           <div class="trust-grid">
-            <figure class="portrait">
-              <img src="assets/IMG_0130.jpeg" alt="Simon De Greyte, founder of Digitalverse" />
-            </figure>
             <div class="trust-copy">
               <h3>Founder-led AI strategy and implementation for businesses that need it done properly.</h3>
               <p>

@@ -30,7 +30,7 @@ The work combines:
 
 - Digitalverse is based in Western Sydney, NSW, Australia.
 - Digitalverse serves Western Sydney and the Blue Mountains, and supports growing small businesses across Australia.
-- The founder is Simon De Greyte.
+- Digitalverse is a founder-led AI strategy and implementation business.
 - The public first step is the Digitalverse readiness check.
 - The readiness check gives visitors a practical score and first workflow suggestion.
 - Visitors can contact Digitalverse by email or WhatsApp.
