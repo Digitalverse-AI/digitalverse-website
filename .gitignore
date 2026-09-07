@@ -1,2 +1,14 @@
+# Archives
 *.zip
+
+# macOS cruft. "Icon\r" files are custom-folder-icon stubs; they previously
+# leaked into .git/refs and corrupted fetch.
 .DS_Store
+Icon?
+Icon
+
+# Large media that exceeds GitHub's 100MB per-file limit
+assets/Digitalverse Mixed Reel.mp4
+
+# Node
+node_modules/

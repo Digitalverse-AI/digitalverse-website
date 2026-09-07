@@ -1,10 +1,10 @@
 # Digitalverse
 
-> Digitalverse helps growing small businesses, serving Western Sydney and the Blue Mountains, establish an AI strategy, then implements secure managed intelligence with connected workflows, governed data, controlled agents, monitoring, and compliance built in.
+> Digitalverse helps growing small businesses, serving Western Sydney and the Blue Mountains, build a practical AI strategy, put the right tools in place, and turn that into real, measurable value, staying engaged after go-live so value keeps growing month over month.
 
 ## What Digitalverse does
 
-Digitalverse designs, deploys, and operates AI-powered operating systems for growing small businesses, with a service focus on Western Sydney and the Blue Mountains.
+Digitalverse helps growing small businesses get real, measurable value from AI, with a service focus on Western Sydney and the Blue Mountains.
 
 The work combines:
 - AI strategy and operating model design
@@ -31,8 +31,8 @@ The work combines:
 - Digitalverse is based in Western Sydney, NSW, Australia.
 - Digitalverse serves Western Sydney and the Blue Mountains, and supports growing small businesses across Australia.
 - Digitalverse is a founder-led AI strategy and implementation business.
-- The public first step is the Digitalverse readiness check.
-- The readiness check gives visitors a practical score and first workflow suggestion.
+- The public first step is a free Digitalverse AI Strategy Snapshot.
+- The AI Strategy Snapshot is a short, no-cost look at where AI could help the business first.
 - Visitors can contact Digitalverse by email or WhatsApp.
 - Digitalverse does not position AI as a replacement for people.
 - Digitalverse focuses on human-supervised managed intelligence, governance, control, compliance, and secure implementation.
@@ -43,11 +43,9 @@ The work combines:
 ## Primary pages
 
 - [Homepage](https://www.digitalverse.com.au/): Digitalverse positioning, managed intelligence overview, AI front office entry point, contact options
-- [AI Readiness Landing Page](https://www.digitalverse.com.au/ai-readiness.html): Focused landing page for small business AI readiness, strategy, secure implementation, contact details, and simulator entry point
 - [AI Agent Accountability Framework](https://www.digitalverse.com.au/agent-accountability.html): Digitalverse framework for accountable agent deployment, including system controls, security, agent governance, identities and secrets, human approval boundaries, and continuous oversight
 - [Constraint-First AI Agents](https://www.digitalverse.com.au/constraint-first-ai-agents.html): Digitalverse implementation insight explaining why AI agents should target bottlenecks rather than isolated tasks, drawing on Amdahl's Law and the Theory of Constraints
 - [Customer Re-engagement Case Study](https://www.digitalverse.com.au/customer-reengagement-case-study.html): Customer story showing a regional retailer re-engaging existing customers through cleaned data, responsible SMS outreach, managed opt-outs, and monitored campaign outcomes
-- [Readiness Check](https://simulator.digitalverse.com.au): Interactive readiness simulator and first workflow suggestion
 - [Privacy Notice](https://www.digitalverse.com.au/privacy.html): Interim privacy notice
 
 ## Contact
