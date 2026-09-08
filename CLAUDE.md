@@ -66,6 +66,29 @@ Two things to know before changing it:
 
 Portal `443641127`, form `b4cb8e1e-515b-4c33-85af-15178f877296`, region `ap1`.
 
+## Analytics and conversion tracking
+
+Two tags on every page except the `ai-readiness.html` redirect stub:
+
+- **Google tag** `AW-18217007323` — Google Ads. There is no GA4 property
+  installed, so there is no on-site behaviour or funnel reporting.
+- **HubSpot** `js.hs-scripts.com/443641127.js` — captures the Google Ads
+  `gclid` on landing and sets HubSpot's analytics cookies.
+
+**Conversions are reported server-side by HubSpot**, not from the browser.
+HubSpot matches a form submission to the stored `gclid` and reports it to the
+Google Ads conversion action `Submit lead form`
+(`AW-18217007323/o_byCJ_B8fAcENvxxe5D`).
+
+Do not add a browser-side `gtag('event', 'conversion', …)` for this form. It
+would double-count against HubSpot's sync, and it cannot work anyway: the
+embed renders in a cross-origin iframe that posts nothing to the parent window
+(verified — both the current embed and the older v2 embed behave this way), so
+there is no submit event to hang a conversion off.
+
+The `tel:` contact button is still untracked; it would need its own conversion
+action and label.
+
 ## Retired: the readiness simulator
 
 `simulator.digitalverse.com.au` was the site-wide CTA and is no longer linked from

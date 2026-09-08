@@ -20,10 +20,6 @@
   var REGION = "ap1";
   var EMBED_SRC = "https://js-ap1.hsforms.net/forms/embed/" + PORTAL_ID + ".js";
 
-  // Google Ads conversion action "Submit lead form". Fired from HubSpot's
-  // submit message rather than a page load: the form lives in a cross-origin
-  // iframe, so there is no navigation or URL change to hang a conversion off.
-  var CONVERSION_SEND_TO = "AW-18217007323/o_byCJ_B8fAcENvxxe5D";
 
   // Token fallbacks keep this usable on any page, including ones without the
   // site's :root block.
@@ -95,28 +91,6 @@
       if (event.key === "Escape" && !modal.hidden) close();
     });
 
-    // Only trust messages from HubSpot's own frame, and count each visitor's
-    // submission once even if the embed emits the event more than once.
-    var conversionSent = false;
-
-    function fromHubSpot(origin) {
-      try {
-        return /(^|\.)hsforms\.net$/.test(new URL(origin).hostname);
-      } catch (err) {
-        return false;
-      }
-    }
-
-    window.addEventListener("message", function (event) {
-      var data = event.data;
-      if (!fromHubSpot(event.origin) || !data) return;
-      if (data.type !== "hsFormCallback" || data.eventName !== "onFormSubmitted") return;
-      if (conversionSent) return;
-      conversionSent = true;
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "conversion", { send_to: CONVERSION_SEND_TO });
-      }
-    });
   }
 
   if (document.readyState === "loading") {
