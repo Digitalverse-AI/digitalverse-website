@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <defs>
+    <linearGradient id="grad-ambition" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#27F1BC"/>
+      <stop offset="1" stop-color="#00D6FF"/>
+    </linearGradient>
+    <radialGradient id="halo-ambition" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0" stop-color="#27F1BC" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#27F1BC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <!-- steps behind (muted) -->
+    <path d="M 20 78 L 40 78 L 40 62 L 58 62" fill="none"
+          stroke="#0B142E" stroke-opacity="0.5" stroke-width="5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- ascent arrow (accent) -->
+    <path d="M 24 66 C 40 62 52 52 66 32" fill="none" stroke="url(#grad-ambition)"
+          stroke-width="5" stroke-linecap="round"/>
+    <path d="M 52 30 L 68 29 L 67 45" fill="none" stroke="url(#grad-ambition)"
+          stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- spark -->
+    <path d="M 78 16 L 78 26 M 73 21 L 83 21" stroke="url(#grad-ambition)"
+          stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
