@@ -28,36 +28,67 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #060a14;
-      --bg2:       #0a1020;
-      --blue:      #3b82f6;
-      --blue-glow: #60a5fa;
-      --green:     #4ade80;
-      --amber:     #fbbf24;
-      --silver:    #cbd5e1;
-      --silver-dim:#94a3b8;
-      --white:     #f1f5f9;
-      --border:    rgba(59,130,246,0.18);
+      color-scheme: light;
+
+      /* surfaces */
+      --ink:         #ffffff;
+      --navy:        #f6f8fb;
+      --panel:       #ffffff;
+      --panel-2:     #fbfcfe;
+
+      /* lines */
+      --line:        rgba(11,18,32,0.10);
+      --hairline:    rgba(11,18,32,0.09);
+
+      /* text ramp */
+      --text:        #08101a;
+      --soft:        #38455c;
+      --muted:       #4b5871;
+      --muted-2:     #5f6c85;
+      --small-print: #56637a;
+
+      /* brand accents (unchanged) */
+      --cyan:        #00b7ff;
+      --teal:        #23e6b4;
+      --violet:      #bb46ff;
+      --blue:        #326bff;
+      --amber:       #f4c95d;
+
+      /* accents darkened for use as TEXT on white */
+      --teal-graphic: #12a179;
+      --teal-text:       #0b7d62;
+      --teal-text-hover: #096851;
+      --violet-text:     #8b2fd6;
+      --cyan-text:       #0b74ad;
+      --amber-text:      #8a6200;
+
+      --radius:       8px;
+      --shadow:       0 18px 44px rgba(11,18,32,0.06);
+      --shadow-panel: 0 24px 60px rgba(11,18,32,0.08);
     }
 
     html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--white);
+      background: var(--ink);
+      color: var(--text);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--blue-glow); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: var(--teal-text); text-decoration: none; }
+    a:hover { color: var(--teal-text-hover); text-decoration: underline; }
+    a:focus-visible,
+    button:focus-visible { outline: 2px solid var(--teal-text); outline-offset: 2px; }
+
+    ::selection { background: rgba(35,230,180,0.24); color: var(--text); }
 
     nav {
       display: flex; align-items: center; justify-content: space-between;
       padding: 22px 32px;
-      border-bottom: 1px solid var(--border);
-      background: rgba(6,10,20,0.85);
+      border-bottom: 1px solid var(--hairline);
+      background: rgba(255,255,255,0.86);
       backdrop-filter: blur(12px);
       position: sticky; top: 0; z-index: 50;
     }
@@ -68,17 +99,16 @@
     .nav-logo img {
       height: 38px; width: 38px;
       object-fit: contain;
-      filter: drop-shadow(0 0 12px rgba(96,165,250,0.18));
     }
     .nav-logo-text {
       font-size: 16px; font-weight: 700; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--white);
+      text-transform: uppercase; color: var(--text);
     }
     .nav-back {
-      font-size: 13px; color: var(--silver-dim); font-weight: 500;
+      font-size: 13px; color: var(--muted-2); font-weight: 500;
       letter-spacing: .02em;
     }
-    .nav-back:hover { color: var(--white); }
+    .nav-back:hover { color: var(--text); }
 
     main {
       max-width: 760px;
@@ -90,7 +120,7 @@
       display: inline-block;
       font-size: 12px; font-weight: 700;
       letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--silver-dim);
+      color: var(--muted-2);
       margin-bottom: 16px;
     }
     h1 {
@@ -101,13 +131,13 @@
       margin-bottom: 16px;
     }
     .last-updated {
-      font-size: 14px; color: var(--silver-dim);
+      font-size: 14px; color: var(--muted-2);
       margin-bottom: 32px;
     }
 
     .interim-banner {
-      background: linear-gradient(135deg, rgba(251,191,36,0.08), rgba(251,191,36,0.02));
-      border: 1px solid rgba(251,191,36,0.3);
+      background: linear-gradient(135deg, rgba(244,201,93,0.16), rgba(244,201,93,0.08));
+      border: 1px solid rgba(196,150,32,0.42);
       border-radius: 12px;
       padding: 18px 22px;
       margin-bottom: 48px;
@@ -122,11 +152,11 @@
     }
     .interim-banner-body {
       font-size: 14px;
-      color: var(--silver);
+      color: var(--muted);
       line-height: 1.65;
     }
     .interim-banner-body strong {
-      color: var(--amber);
+      color: var(--amber-text);
       display: block;
       margin-bottom: 4px;
       font-weight: 700;
@@ -138,13 +168,13 @@
       margin-top: 44px;
       margin-bottom: 14px;
       letter-spacing: -.01em;
-      color: var(--white);
+      color: var(--text);
     }
     h2:first-of-type { margin-top: 0; }
 
     p {
       font-size: 15.5px;
-      color: var(--silver);
+      color: var(--muted);
       margin-bottom: 16px;
     }
 
@@ -154,7 +184,7 @@
     }
     ul li {
       font-size: 15.5px;
-      color: var(--silver);
+      color: var(--muted);
       padding: 6px 0 6px 26px;
       position: relative;
     }
@@ -164,42 +194,44 @@
       left: 6px; top: 16px;
       width: 6px; height: 6px;
       border-radius: 50%;
-      background: var(--blue-glow);
+      background: var(--teal-graphic);
     }
 
-    strong { color: var(--white); font-weight: 600; }
+    strong { color: var(--text); font-weight: 600; }
 
     .contact-block {
       margin-top: 56px;
       padding: 28px;
-      background: rgba(10,16,32,0.6);
-      border: 1px solid var(--border);
+      background: var(--panel-2);
+      border: 1px solid var(--line);
       border-radius: 14px;
+      box-shadow: var(--shadow);
     }
     .contact-block h3 {
       font-size: 16px; font-weight: 700;
       margin-bottom: 12px;
-      color: var(--white);
+      color: var(--text);
     }
-    .contact-block p { font-size: 14px; margin-bottom: 6px; }
+    .contact-block p { font-size: 14px; margin-bottom: 6px; color: var(--small-print); }
 
     footer {
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--hairline);
       padding: 40px 28px;
       text-align: center;
-      color: var(--silver-dim);
+      color: var(--muted-2);
       font-size: 13px;
     }
-    footer a { color: var(--blue-glow); }
+    footer a { color: var(--teal-text); }
+    footer a:hover { color: var(--teal-text-hover); }
     .footer-tagline {
       margin-top: 14px;
       font-size: 11px; font-weight: 700;
       letter-spacing: 0.32em; text-transform: uppercase;
-      color: var(--silver-dim);
+      color: var(--muted-2);
     }
-    .footer-tagline .t-1 { color: #c084fc; }
-    .footer-tagline .t-2 { color: var(--blue-glow); }
-    .footer-tagline .t-3 { color: var(--green); }
+    .footer-tagline .t-1 { color: var(--violet-text); }
+    .footer-tagline .t-2 { color: var(--cyan-text); }
+    .footer-tagline .t-3 { color: var(--teal-text); }
 
     @media (max-width: 600px) {
       nav { padding: 16px 20px; }
