@@ -55,6 +55,19 @@ a booking CTA anywhere:
 It is loaded on `index.html`, `agent-accountability.html`,
 `constraint-first-ai-agents.html` and `customer-reengagement-case-study.html`.
 
+**After changing `assets/snapshot-modal.js`, re-stamp its version query.**
+Cloudflare fronts this site and caches `assets/*` for four hours
+(`cf-cache-status: HIT`, `max-age=14400`), while HTML is served fresh
+(`DYNAMIC`). Without a new query string, an edited module keeps serving stale
+to visitors for up to four hours after deploy:
+
+```bash
+H=$(shasum -a 256 assets/snapshot-modal.js | cut -c1-8)
+sed -i '' -E "s|snapshot-modal\.js(\?v=[0-9a-f]+)?|snapshot-modal.js?v=$H|g" *.html
+```
+
+The same applies to any other file under `assets/` that pages depend on.
+
 Two things to know before changing it:
 
 - **The HubSpot form renders in a cross-origin iframe.** Its fields, fonts and colours
