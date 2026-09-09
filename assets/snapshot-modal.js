@@ -21,14 +21,17 @@
   var EMBED_SRC = "https://js-ap1.hsforms.net/forms/embed/" + PORTAL_ID + ".js";
 
 
-  // Token fallbacks keep this usable on any page, including ones without the
-  // site's :root block.
+  // The panel supplies its own opaque white surface rather than relying on the
+  // embedded form to paint one. HubSpot serves this form with a transparent
+  // background, so an unpainted panel let the dark backdrop show through and
+  // left the form's black text unreadable. Token fallbacks keep the rest
+  // usable on any page, including ones without the site's :root block.
   var CSS = [
     ".snapshot-modal[hidden]{display:none}",
     ".snapshot-modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px}",
     ".snapshot-modal-backdrop{position:absolute;inset:0;background:rgba(3,7,13,.78);backdrop-filter:blur(4px)}",
     ".snapshot-modal-panel{position:relative;width:min(560px,100%)}",
-    ".snapshot-modal-body{max-height:88vh;overflow-y:auto;border-radius:var(--radius,8px);box-shadow:var(--shadow,0 24px 70px rgba(0,0,0,.32))}",
+    ".snapshot-modal-body{max-height:88vh;overflow-y:auto;border-radius:var(--radius,8px);background:#fff;box-shadow:0 24px 70px rgba(3,7,13,.34)}",
     ".snapshot-modal .hs-form-frame iframe{display:block;width:100%;border:0}",
     ".snapshot-modal-close{position:absolute;top:10px;right:10px;z-index:1;width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.22);border-radius:var(--radius,8px);background:rgba(3,7,13,.82);color:#f5f7fa;font-size:19px;line-height:1;cursor:pointer;transition:border-color 180ms ease,color 180ms ease,background 180ms ease}",
     ".snapshot-modal-close:hover{border-color:rgba(35,230,180,.55);color:#23e6b4;background:rgba(3,7,13,.92)}"
