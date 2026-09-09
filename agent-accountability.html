@@ -93,6 +93,7 @@
       --soft: #38455c;
       --cyan: #00b7ff;
       --teal: #23e6b4;
+      --teal-graphic: #12a179;
       --teal-text: #0b7d62;
       --teal-text-hover: #096851;
       --violet: #bb46ff;
@@ -190,16 +191,20 @@
     }
 
     .nav-links a {
-      color: var(--muted);
+      color: #46536a;
       font-size: 14px;
       font-weight: 600;
       text-decoration: none;
       transition: color 180ms ease;
     }
 
-    .nav-links a:hover,
+    .nav-links a:hover {
+      color: #0b1220;
+    }
+
     .nav-links a[aria-current="page"] {
-      color: var(--text);
+      color: #0b1220;
+      font-weight: 800;
     }
 
     .nav-actions {
@@ -313,7 +318,7 @@
 
     .hero {
       position: relative;
-      padding: 84px 0 76px;
+      padding: 128px 0 76px;
       border-bottom: 1px solid rgba(11, 18, 32, 0.09);
     }
 
@@ -871,7 +876,7 @@
 
     @media (max-width: 700px) {
       .hero {
-        padding: 84px 0 56px;
+        padding: 112px 0 56px;
       }
 
       .hero-figure img {

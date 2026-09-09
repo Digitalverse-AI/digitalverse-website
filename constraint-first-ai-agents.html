@@ -90,6 +90,7 @@
       --soft: #38455c;
       --cyan: #00b7ff;
       --teal: #23e6b4;
+      --teal-graphic: #12a179;
       --teal-text: #0b7d62;
       --teal-text-hover: #096851;
       --violet: #bb46ff;
@@ -184,7 +185,7 @@
     }
 
     .nav-links a {
-      color: var(--muted);
+      color: #46536a;
       font-size: 14px;
       font-weight: 600;
       text-decoration: none;
@@ -192,7 +193,12 @@
     }
 
     .nav-links a:hover {
-      color: var(--text);
+      color: #0b1220;
+    }
+
+    .nav-links a[aria-current="page"] {
+      color: #0b1220;
+      font-weight: 800;
     }
 
     .nav-actions {
@@ -399,7 +405,7 @@
 
     .plain-english {
       margin: 32px 0;
-      border-left: 4px solid var(--teal);
+      border-left: 4px solid var(--teal-graphic);
       padding: 10px 0 10px 22px;
     }
 
@@ -549,7 +555,7 @@
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: var(--teal);
+      background: var(--teal-graphic);
     }
 
     .cta-band {
