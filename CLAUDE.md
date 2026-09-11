@@ -33,8 +33,8 @@ Each page is a standalone, self-contained document:
 | `agent-accountability.html` | Accountability / governance |
 | `constraint-first-ai-agents.html` | Insight article |
 | `customer-reengagement-case-study.html` | Case study |
-| `ai-consulting-western-sydney.html` | Service-area page; title/h1 carry "AI consulting Western Sydney"; Service + FAQPage schema |
-| `ai-consulting-blue-mountains.html` | Service-area page for the Blue Mountains (the business is based in Glenbrook) |
+| `ai-automation-western-sydney.html` | Service-area page; title/h1 carry "AI automation Western Sydney"; Service + FAQPage schema. `ai-consulting-western-sydney.html` is a redirect stub to it |
+| `ai-automation-blue-mountains.html` | Service-area page for the Blue Mountains (the business is based in Glenbrook). `ai-consulting-blue-mountains.html` is a redirect stub to it |
 | `ai-readiness.html` | Redirect stub → `/`, preserves query params |
 | `privacy.html` | Privacy policy (`noindex`) |
 
@@ -150,6 +150,12 @@ Contrast rules that came out of the light-theme spec review, keep them:
 - `llms.txt` is the AI-assistant summary; keep its "Key facts for citation" in step with
   the homepage schema and FAQ. It is the source of truth agents are told to check
   claims against — do not add facts to pages that are not in it.
+- **Positioning term is "AI automation"** (Simon's call, 2026-09-11, backed by Google Trends:
+  the largest buyer-intent term in Australia). Customer-facing copy says "AI automation" and
+  uses a "we build and run" voice. **Never say "AI consulting" in visible copy.** It survives
+  only as a searcher phrasing: FAQ *questions* ("Are there AI consultants in…?", "How much does
+  an AI consultant cost?") match Google's People-also-ask boxes verbatim and must stay; schema
+  `serviceType`/`knowsAbout` and the llms.txt query list keep it as a secondary term.
 - The homepage carries a 7-question FAQ with matching `FAQPage` JSON-LD; the two area
   pages carry 5 each. Question/answer text in the schema must stay verbatim with the
   visible text.
