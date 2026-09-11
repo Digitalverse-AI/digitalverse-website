@@ -170,6 +170,9 @@ Contrast rules that came out of the light-theme spec review, keep them:
 
 ## Gotchas
 
+**`BingSiteAuth.xml`** at the root is Bing Webmaster Tools' site-verification file. Keep
+it exactly where and as it is (filename is case-sensitive); do not add it to the sitemap.
+
 **macOS `Icon\r` files.** Something (a sync client or Finder custom icons) scatters
 zero-byte `Icon\r` files through this tree. They previously landed inside `.git/refs/`
 and corrupted every `git fetch` with `fatal: bad object refs/Icon?`. They are now
