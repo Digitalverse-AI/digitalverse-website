@@ -33,7 +33,10 @@ Each page is a standalone, self-contained document:
 | `agent-accountability.html` | Accountability / governance |
 | `constraint-first-ai-agents.html` | Insight article |
 | `customer-reengagement-case-study.html` | Case study |
-| `privacy.html` | Privacy policy |
+| `ai-consulting-western-sydney.html` | Service-area page; title/h1 carry "AI consulting Western Sydney"; Service + FAQPage schema |
+| `ai-consulting-blue-mountains.html` | Service-area page for the Blue Mountains (the business is based in Glenbrook) |
+| `ai-readiness.html` | Redirect stub → `/`, preserves query params |
+| `privacy.html` | Privacy policy (`noindex`) |
 
 Styles are not shared: every page carries its own inline `<style>` block and one or two
 inline `<script>` blocks. Fonts come from Google Fonts (Inter); analytics is inline
@@ -52,8 +55,7 @@ a booking CTA anywhere:
 <script src="assets/snapshot-modal.js" defer></script>
 ```
 
-It is loaded on `index.html`, `agent-accountability.html`,
-`constraint-first-ai-agents.html` and `customer-reengagement-case-study.html`.
+It is loaded on every page except `privacy.html` and the `ai-readiness.html` stub.
 
 **After changing `assets/snapshot-modal.js`, re-stamp its version query.**
 Cloudflare fronts this site and caches `assets/*` for four hours
@@ -113,22 +115,44 @@ service and is not part of this repo.
 
 ## Design tokens — duplicated, so edit every copy
 
-Five pages open their `<style>` block with an identical `:root` block. Because there is
-no shared stylesheet, **a token change must be applied to all five**, or pages drift:
+The site is **light-themed** (`color-scheme: light`). Six pages open their `<style>`
+block with an identical `:root` token block (agent-accountability adds `--danger`).
+There is no shared stylesheet, so **a token change must be applied to every copy**:
 
 ```css
---ink: #05070d;    --navy: #080d16;   --panel: #0d151f;  --panel-2: #121b26;
---text: #f5f7fa;   --muted: #a7b4c6;  --soft: #dbe4ef;
---cyan: #00b7ff;   --teal: #23e6b4;   --violet: #bb46ff; --blue: #326bff;
---amber: #f4c95d;  --radius: 8px;
+--ink: #ffffff;  --navy: #f6f8fb;  --panel: #ffffff;  --panel-2: #fbfcfe;
+--line: rgba(11,18,32,0.10);  --line-strong: rgba(15,158,124,0.42);
+--text: #08101a;  --soft: #38455c;  --muted: #4b5871;  --muted-2: #5f6c85;
+--small-print: #56637a;
+--cyan: #00b7ff;  --teal: #23e6b4;  --violet: #bb46ff;  --blue: #326bff;  --amber: #f4c95d;
+--teal-text: #0b7d62;  --teal-text-hover: #096851;  --teal-graphic: #12a179;
+--radius: 8px;  --shadow: 0 18px 44px rgba(11,18,32,0.06);
 ```
 
-`privacy.html` is the exception — it has its own lighter styles and no token block.
+Contrast rules that came out of the light-theme spec review, keep them:
+- `#23e6b4` is **never** text on white (1.61:1). Text uses `--teal-text`; decorative
+  dots/rules use `--teal-graphic` (3.28:1, the graphics floor).
+- `privacy.html` has its own lighter styles and no token block.
+- Brand palette source: `assets/digitalverse_colour_palette_onboard.json`.
 
-The site is dark-only (`color-scheme: dark`). Token names map onto the brand palette in
-`assets/digitalverse_colour_palette_onboard.json`; brand rationale and the
-**Onboard. Scale Up. Transform.** tagline are in
-`assets/digitalverse_brand_asset_notes_onboard.md`.
+## Identity, canonical host and phone
+
+- **Canonical host is the bare domain** `https://digitalverse.com.au/`. `www.` 301s to
+  it. Every self-reference (canonical, og:url, sitemap, llms.txt, JSON-LD) must use the
+  bare host — Google was indexing a mix of both before this was fixed.
+- **Phone**: machine-readable fields are E.164 `+61494436113` (`tel:`, schema
+  `telephone`, `wa.me/61494436113`). Visible text is `+61 4 94436113`. No other number
+  or format anywhere.
+- **Schema** (homepage `ProfessionalService`) mirrors the Google Business Profile
+  exactly: 12 Ross St, Glenbrook NSW 2773, geo, `hasMap`/`sameAs` → Maps CID
+  `15754954551684232246` and LinkedIn `company/131434244`, founders Simon and Vicky
+  De Greyte. The street address lives **only** in JSON-LD, never in visible copy.
+- `llms.txt` is the AI-assistant summary; keep its "Key facts for citation" in step with
+  the homepage schema and FAQ. It is the source of truth agents are told to check
+  claims against — do not add facts to pages that are not in it.
+- The homepage carries a 7-question FAQ with matching `FAQPage` JSON-LD; the two area
+  pages carry 5 each. Question/answer text in the schema must stay verbatim with the
+  visible text.
 
 ## When adding or changing a page
 

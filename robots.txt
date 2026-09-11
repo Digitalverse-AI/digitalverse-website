@@ -38,4 +38,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://www.digitalverse.com.au/sitemap.xml
+Sitemap: https://digitalverse.com.au/sitemap.xml
