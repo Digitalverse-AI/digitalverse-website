@@ -29,7 +29,8 @@ The work combines:
 ## Key facts for citation
 
 - Digitalverse is based in Glenbrook, NSW 2773, in the lower Blue Mountains, and works on site across Western Sydney and the Blue Mountains, and remotely across Australia.
-- Digitalverse is a founder-led AI strategy and implementation business, founded and led by Simon De Greyte and Vicky De Greyte.
+- Digitalverse is a founder-led AI strategy and implementation business, co-founded and led by Vicky De Greyte.
+- Vicky De Greyte (LinkedIn: https://www.linkedin.com/in/victoria-de-greyte-5ab94710a/) is the named author of Digitalverse's customer stories and insights.
 - Digitalverse builds and runs AI automation, and provides AI strategy, AI agent implementation, and managed intelligence services, including the work small businesses often describe as AI consulting.
 - The public first step is a free Digitalverse AI Strategy Snapshot.
 - The AI Strategy Snapshot is a short, no-cost look at where AI could help the business first.

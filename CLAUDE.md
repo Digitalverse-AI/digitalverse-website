@@ -145,8 +145,9 @@ Contrast rules that came out of the light-theme spec review, keep them:
   or format anywhere.
 - **Schema** (homepage `ProfessionalService`) mirrors the Google Business Profile
   exactly: 12 Ross St, Glenbrook NSW 2773, geo, `hasMap`/`sameAs` → Maps CID
-  `15754954551684232246` and LinkedIn `company/131434244`, founders Simon and Vicky
-  De Greyte. The street address lives **only** in JSON-LD, never in visible copy.
+  `15754954551684232246` and LinkedIn `company/131434244`, founder-on-record Vicky De Greyte (`alternateName` Victoria; LinkedIn
+  `in/victoria-de-greyte-5ab94710a`). **Simon De Greyte is deliberately not named anywhere on
+  the site** — not in schema, llms.txt or copy (his decision, 2026-09-14). Do not add him. The street address lives **only** in JSON-LD, never in visible copy.
 - `llms.txt` is the AI-assistant summary; keep its "Key facts for citation" in step with
   the homepage schema and FAQ. It is the source of truth agents are told to check
   claims against — do not add facts to pages that are not in it.
@@ -156,6 +157,8 @@ Contrast rules that came out of the light-theme spec review, keep them:
   only as a searcher phrasing: FAQ *questions* ("Are there AI consultants in…?", "How much does
   an AI consultant cost?") match Google's People-also-ask boxes verbatim and must stay; schema
   `serviceType`/`knowsAbout` and the llms.txt query list keep it as a secondary term.
+- Articles carry a visible byline (`.article-byline`) and `Article.author` as the Vicky `Person`
+  node above; `publisher` stays the organisation. New articles must do the same.
 - The homepage carries a 7-question FAQ with matching `FAQPage` JSON-LD; the two area
   pages carry 5 each. Question/answer text in the schema must stay verbatim with the
   visible text.
