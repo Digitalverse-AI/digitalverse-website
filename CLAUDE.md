@@ -191,3 +191,18 @@ Two such files are still tracked from before the ignore rule (`Icon\r`,
 **Oversized media.** `assets/Digitalverse Mixed Reel.mp4` is 112MB — above GitHub's
 100MB hard limit, so committing it would get the push rejected. It is gitignored. Host
 large video externally and embed it rather than committing it.
+
+## Machine readability (AI crawlers and agents)
+
+AI crawlers and converters (Cloudflare Markdown for Agents, readability extractors) strip
+`<header>`, `<footer>`, `<nav>` and often `<aside>` as boilerplate. So:
+
+- Only chrome (nav labels, logo, footer links, tagline) may live in header/footer/nav. Real copy
+  goes in `<section>`/`<article>` inside `<main>`; content side-panels use
+  `<section class="aside-panel">`, never `<aside>`.
+- Every page has `<meta name="title">` mirroring `<title>` (converters build frontmatter from
+  meta title/description/og:image, not from `<title>`).
+- Entity facts agents need (legal name, email, url) live in JSON-LD, which converters keep
+  verbatim; the homepage node is `@id https://digitalverse.com.au/#organization` and other
+  pages' provider/publisher nodes reference it.
+- FAQ questions are `<h3>` inside `<summary>`; every content section has a real heading.
