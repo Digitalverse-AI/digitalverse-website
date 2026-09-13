@@ -45,7 +45,10 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": [
+    "ProfessionalService",
+    "Organization"
+  ],
   "@id": "https://digitalverse.com.au/#organization",
   "name": "Digitalverse",
   "url": "https://digitalverse.com.au/",
@@ -146,6 +149,19 @@
       "name": "Vicky De Greyte"
     }
   ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://digitalverse.com.au/#website",
+  "name": "Digitalverse",
+  "url": "https://digitalverse.com.au/",
+  "inLanguage": "en-AU",
+  "publisher": {
+    "@id": "https://digitalverse.com.au/#organization"
+  }
 }
   </script>
   <script type="application/ld+json">
@@ -847,7 +863,7 @@
       font-weight: 950;
     }
 
-    .workflow-row h4 {
+    .workflow-row h3 {
       margin: 0 0 5px;
       font-size: 17px;
     }
@@ -1364,7 +1380,7 @@
               </div>
             </div>
             <figure class="hero-figure">
-              <img src="assets/onboarding%20shot.jpg" alt="Digitalverse onboarding discovery session with a small business team around a table." />
+              <img src="assets/onboarding-shot-1200.jpg" alt="Digitalverse onboarding discovery session with a small business team around a table." width="800" height="1200" decoding="async" fetchpriority="high" />
               <figcaption>Onboarding · Discovery session</figcaption>
             </figure>
           </div>
@@ -1513,28 +1529,28 @@
                 <div class="workflow-row">
                   <span class="row-num">1</span>
                   <div>
-                    <h4>Capture</h4>
+                    <h3>Capture</h3>
                     <p>Website, email, voice, or message enquiries are captured with enough context for action.</p>
                   </div>
                 </div>
                 <div class="workflow-row">
                   <span class="row-num">2</span>
                   <div>
-                    <h4>Qualify</h4>
+                    <h3>Qualify</h3>
                     <p>Agents ask the right questions, classify urgency, and prepare a clean summary.</p>
                   </div>
                 </div>
                 <div class="workflow-row">
                   <span class="row-num">3</span>
                   <div>
-                    <h4>Route</h4>
+                    <h3>Route</h3>
                     <p>Leads, jobs, or requests move to the right person, system, calendar, or approval queue.</p>
                   </div>
                 </div>
                 <div class="workflow-row">
                   <span class="row-num">4</span>
                   <div>
-                    <h4>Follow up</h4>
+                    <h3>Follow up</h3>
                     <p>Customers receive clear next steps while your team gets the information needed to respond well.</p>
                   </div>
                 </div>
@@ -1583,7 +1599,7 @@
         <div class="container">
           <div class="insight-feature">
             <a class="insight-image" href="customer-reengagement-case-study.html" aria-label="Read customer re-engagement case study">
-              <img src="assets/customer-reengagement-case-study.png" alt="Digitalverse customer story visual showing an AI Agent customer re-engagement workflow." />
+              <img src="assets/customer-reengagement-case-study-1200.jpg" alt="Digitalverse customer story visual showing an AI Agent customer re-engagement workflow." width="1200" height="800" decoding="async" loading="lazy" />
             </a>
             <div class="insight-copy">
               <p class="section-kicker">Customer story</p>
@@ -1597,7 +1613,7 @@
 
           <div class="insight-feature">
             <a class="insight-image" href="constraint-first-ai-agents.html" aria-label="Read AI agents should target bottlenecks, not tasks">
-              <img src="assets/constraint-targeting-headline.png" alt="Digitalverse constraint-first AI agent implementation visual." />
+              <img src="assets/constraint-targeting-headline-1200.jpg" alt="Digitalverse constraint-first AI agent implementation visual." width="1200" height="675" decoding="async" loading="lazy" />
             </a>
             <div class="insight-copy">
               <p class="section-kicker">Implementation insight</p>
