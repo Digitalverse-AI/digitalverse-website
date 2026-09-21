@@ -33,11 +33,12 @@ Each page is a standalone, self-contained document:
 | `agent-accountability.html` | Accountability / governance |
 | `constraint-first-ai-agents.html` | Insight article |
 | `customer-reengagement-case-study.html` | Case study |
-| `ai-chief-of-staff-case-study.html` | Case study — AI Chief of Staff agent for a renewable energy installer (anonymised) |
+| `solar-installer-ai-operations-case-study.html` | Case study — AI operations agent for a growing solar and electrification installer (client unnamed) |
 | `ai-automation-western-sydney.html` | Service-area page; title/h1 carry "AI automation Western Sydney"; Service + FAQPage schema. `ai-consulting-western-sydney.html` is a redirect stub to it |
 | `ai-automation-blue-mountains.html` | Service-area page for the Blue Mountains (the business is based in Glenbrook). `ai-consulting-blue-mountains.html` is a redirect stub to it |
 | `ai-readiness.html` | Redirect stub → `/`, preserves query params |
 | `privacy.html` | Privacy policy (`noindex`) |
+| `ai-assessment.html` | Paid-ads landing page (`noindex`), **generated** — never edit by hand; see "Landing pages" below |
 
 Styles are not shared: every page carries its own inline `<style>` block and one or two
 inline `<script>` blocks. Fonts come from Google Fonts (Inter); analytics is inline
@@ -192,6 +193,25 @@ Two such files are still tracked from before the ignore rule (`Icon\r`,
 **Oversized media.** `assets/Digitalverse Mixed Reel.mp4` is 112MB — above GitHub's
 100MB hard limit, so committing it would get the push rejected. It is gitignored. Host
 large video externally and embed it rather than committing it.
+
+
+## Landing pages (paid campaigns)
+
+`ai-assessment.html` (served as `/ai-assessment`) is generated, not hand-written:
+
+- Copy and settings live in `landing/ai-assessment.json`; the page shell is `landing/_template.html`.
+- Rebuild after any change: `node tools/build-landing.mjs landing/ai-assessment.json` (zero dependencies;
+  output is deterministic, so re-running is safe). Unknown placeholders, missing keys, non-array
+  `{{#each}}` lists and non-https URLs fail the build on purpose.
+- New campaign = copy the JSON to `landing/<slug>.json`, change `slug` and the copy, rebuild. The template
+  HTML-escapes every value; `{{key|json}}` is for the JSON-LD block only.
+- Landing pages are `noindex, follow`, standalone (no site nav, logo not linked, the only links are the
+  customer story, privacy, WhatsApp and email), mobile-first, and embed the existing HubSpot form twice
+  (`landing/<slug>.json` → `form.form_id`). They are not in `sitemap.xml` or `llms.txt`.
+- UTM tracking needs nothing in the markup: the HubSpot tracking script stores the full landing URL
+  (including `utm_*`) on the contact. There is no Meta Pixel on the site.
+- `.nojekyll` at the repo root stops GitHub Pages running Jekyll, so `{{ }}` in the template can never
+  break a deploy.
 
 ## Machine readability (AI crawlers and agents)
 

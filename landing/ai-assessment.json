@@ -1,0 +1,51 @@
+{
+  "slug": "ai-assessment",
+  "campaign": "facebook-ai-assessment",
+  "page_title": "Free AI Assessment for Your Business | Digitalverse",
+  "meta_description": "Book a free, no-obligation AI Assessment and walk away knowing exactly where AI could make or save you real money. No contracts. No sales pitch. No cost.",
+  "headline": "Every Business Is About to Have an AI Strategy. The Ones Who Move First Win.",
+  "subheadline": "AI isn't a \"nice to have\" anymore — it's becoming the new baseline for how businesses run, and the gap between the businesses using it well and the ones falling behind is widening fast. Book a free, no-obligation AI Assessment and walk away knowing exactly where AI could make or save you real money — explained in plain English, no jargon, no tech-speak.",
+  "offer_items": [
+    "A 30-minute session with a real AI strategist — not a salesperson, not a chatbot",
+    "A clear picture of where your business is losing time and money right now",
+    "A plain-English roadmap of what AI could realistically do for your business first",
+    "Zero cost, zero pressure, zero obligation to do anything after"
+  ],
+  "cta_text": "Book My Free AI Assessment",
+  "risk_reversal": "No contracts. No sales pitch. No \"book a call to get sold something.\" If there's nothing worth pursuing, we'll tell you straight — you'll still walk away with a clearer picture than when you started.",
+  "urgency": "Spots are limited each week — we only take on a handful of Assessments at a time so every business gets a proper session, not a rushed sales call.",
+  "trust_line": "Based in Glenbrook, working with businesses across Western Sydney and Sydney metro, plus the Blue Mountains and remotely across Australia.",
+  "problem": "You're busy running the business. Enquiries come in, jobs need following up, and somewhere in the back of your mind you know AI could help — you just don't have time to figure out where to start, or who to trust to set it up properly. That's exactly what the Free AI Assessment is for.",
+  "steps": [
+    {
+      "title": "A quick chat",
+      "body": "— 30 minutes, no prep needed."
+    },
+    {
+      "title": "A clear picture",
+      "body": "— where you're losing time and where AI could genuinely help first."
+    },
+    {
+      "title": "A plain-English plan",
+      "body": "— walk away knowing what's possible, zero pressure."
+    }
+  ],
+  "social_proof": {
+    "kicker": "Customer story",
+    "headline": "Giving businesses a path to $10M.",
+    "sentence": "For a growing solar and electrification installer, our work started with the everyday operations that make growth possible: responding to enquiries, progressing quotes, booking installations and keeping the team focused.",
+    "url": "solar-installer-ai-operations-case-study.html",
+    "link_text": "Read the customer story"
+  },
+  "reassurance": "No cost. No catch. No obligation. Built for real businesses — trades, professional services, local operators — not tech companies. You keep control, we never replace your team.",
+  "talk_first": {
+    "intro": "Prefer to talk first? WhatsApp us or send an email.",
+    "whatsapp_url": "https://wa.me/61494436113?text=Hi%20Digitalverse%2C%20I%27d%20like%20to%20book%20a%20free%20AI%20Assessment.",
+    "email": "hello@digitalverse.com.au"
+  },
+  "form": {
+    "region": "ap1",
+    "portal_id": "443641127",
+    "form_id": "b4cb8e1e-515b-4c33-85af-15178f877296"
+  }
+}
