@@ -46,14 +46,14 @@ inline `<script>` blocks. Fonts come from Google Fonts (Inter); analytics is inl
 
 The one shared file is `assets/snapshot-modal.js` (see below).
 
-## The AI Strategy Snapshot modal
+## The AI Assessment modal
 
 `assets/snapshot-modal.js` is the site's single shared script. It injects its own
 styles and markup, then wires every `[data-snapshot-open]` button on the page. To put
 a booking CTA anywhere:
 
 ```html
-<button class="btn btn-primary" type="button" data-snapshot-open aria-haspopup="dialog">Book a Free Snapshot</button>
+<button class="btn btn-primary" type="button" data-snapshot-open aria-haspopup="dialog">Book a Free Assessment</button>
 <script src="assets/snapshot-modal.js" defer></script>
 ```
 
@@ -138,6 +138,12 @@ Contrast rules that came out of the light-theme spec review, keep them:
 - Brand palette source: `assets/digitalverse_colour_palette_onboard.json`.
 
 ## Identity, canonical host and phone
+
+**The offer is the "AI Assessment"** (renamed from "AI Strategy Snapshot" on 2026-09-22 to match the
+HubSpot form heading and the paid campaign). Visible copy, FAQ questions, schema, llms.txt and the
+privacy notice all say AI Assessment; the word "Snapshot" must not appear in anything a visitor or
+crawler reads. Code identifiers deliberately keep the old name (`assets/snapshot-modal.js`,
+`data-snapshot-open`, `.snapshot-modal*`) so nothing has to be re-wired.
 
 - **Canonical host is the bare domain** `https://digitalverse.com.au/`. `www.` 301s to
   it. Every self-reference (canonical, og:url, sitemap, llms.txt, JSON-LD) must use the

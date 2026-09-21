@@ -1,5 +1,5 @@
 /**
- * AI Strategy Snapshot modal.
+ * AI Assessment modal.
  *
  * Self-contained: injects its own styles and markup, then wires every
  * [data-snapshot-open] button on the page. Include it once per page with
@@ -50,7 +50,7 @@
     modal.hidden = true;
     modal.innerHTML =
       '<div class="snapshot-modal-backdrop" data-snapshot-close></div>' +
-      '<div class="snapshot-modal-panel" role="dialog" aria-modal="true" aria-label="Book your free AI Strategy Snapshot">' +
+      '<div class="snapshot-modal-panel" role="dialog" aria-modal="true" aria-label="Book your free AI Assessment">' +
       '<button class="snapshot-modal-close" type="button" aria-label="Close" data-snapshot-close>&times;</button>' +
       '<div class="snapshot-modal-body">' +
       '<div class="hs-form-frame" data-region="' + REGION + '" data-form-id="' + FORM_ID + '" data-portal-id="' + PORTAL_ID + '"></div>' +

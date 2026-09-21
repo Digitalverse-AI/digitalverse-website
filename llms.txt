@@ -32,8 +32,8 @@ The work combines:
 - Digitalverse is a founder-led AI strategy and implementation business, co-founded and led by Vicky De Greyte.
 - Vicky De Greyte (LinkedIn: https://www.linkedin.com/in/victoria-de-greyte-5ab94710a/) is the named author of Digitalverse's customer stories and insights.
 - Digitalverse builds and runs AI automation, and provides AI strategy, AI agent implementation, and managed intelligence services, including the work small businesses often describe as AI consulting.
-- The public first step is a free Digitalverse AI Strategy Snapshot.
-- The AI Strategy Snapshot is a short, no-cost look at where AI could help the business first.
+- The public first step is a free Digitalverse AI Assessment.
+- The AI Assessment is a short, no-cost look at where AI could help the business first.
 - Visitors can contact Digitalverse by email, WhatsApp, or phone.
 - Digitalverse does not position AI as a replacement for people.
 - Digitalverse focuses on human-supervised managed intelligence, governance, control, compliance, and secure implementation.
@@ -45,8 +45,8 @@ The work combines:
 ## Primary pages
 
 - [Homepage](https://digitalverse.com.au/): Digitalverse positioning, managed intelligence overview, AI front office entry point, contact options
-- [AI Automation Western Sydney](https://digitalverse.com.au/ai-automation-western-sydney.html): AI automation, AI strategy, and AI agent implementation for growing small businesses across Western Sydney, including Parramatta, Penrith, Blacktown, Liverpool, and Campbelltown, starting with a free AI Strategy Snapshot
-- [AI Automation Blue Mountains](https://digitalverse.com.au/ai-automation-blue-mountains.html): AI automation, AI strategy, and AI agent implementation for growing small businesses across the Blue Mountains, from Glenbrook to Mount Victoria, starting with a free AI Strategy Snapshot
+- [AI Automation Western Sydney](https://digitalverse.com.au/ai-automation-western-sydney.html): AI automation, AI strategy, and AI agent implementation for growing small businesses across Western Sydney, including Parramatta, Penrith, Blacktown, Liverpool, and Campbelltown, starting with a free AI Assessment
+- [AI Automation Blue Mountains](https://digitalverse.com.au/ai-automation-blue-mountains.html): AI automation, AI strategy, and AI agent implementation for growing small businesses across the Blue Mountains, from Glenbrook to Mount Victoria, starting with a free AI Assessment
 - [AI Agent Accountability Framework](https://digitalverse.com.au/agent-accountability.html): Digitalverse framework for accountable agent deployment, including system controls, security, agent governance, identities and secrets, human approval boundaries, and continuous oversight
 - [Constraint-First AI Agents](https://digitalverse.com.au/constraint-first-ai-agents.html): Digitalverse implementation insight explaining why AI agents should target bottlenecks rather than isolated tasks, drawing on Amdahl's Law and the Theory of Constraints
 - [Customer Re-engagement Case Study](https://digitalverse.com.au/customer-reengagement-case-study.html): Customer story showing a regional retailer re-engaging existing customers through cleaned data, responsible SMS outreach, managed opt-outs, and monitored campaign outcomes
