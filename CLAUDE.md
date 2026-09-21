@@ -33,6 +33,7 @@ Each page is a standalone, self-contained document:
 | `agent-accountability.html` | Accountability / governance |
 | `constraint-first-ai-agents.html` | Insight article |
 | `customer-reengagement-case-study.html` | Case study |
+| `ai-chief-of-staff-case-study.html` | Case study — AI Chief of Staff agent for a renewable energy installer (anonymised) |
 | `ai-automation-western-sydney.html` | Service-area page; title/h1 carry "AI automation Western Sydney"; Service + FAQPage schema. `ai-consulting-western-sydney.html` is a redirect stub to it |
 | `ai-automation-blue-mountains.html` | Service-area page for the Blue Mountains (the business is based in Glenbrook). `ai-consulting-blue-mountains.html` is a redirect stub to it |
 | `ai-readiness.html` | Redirect stub → `/`, preserves query params |

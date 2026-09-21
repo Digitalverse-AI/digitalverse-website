@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="t d">
+  <title id="t">One AI agent briefing a director and team</title>
+  <desc id="d">A central daily-briefing card connected to four systems: CRM, field service, calendar and inbox.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#23e6b4"/><stop offset="1" stop-color="#00b7ff"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bb46ff"/><stop offset="1" stop-color="#326bff"/></linearGradient>
+    <filter id="s" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0b1220" flood-opacity=".10"/></filter>
+  </defs>
+  <rect width="1200" height="750" fill="#f6f8fb"/>
+  <g stroke="rgba(11,18,32,.14)" stroke-width="3" fill="none" stroke-dasharray="8 10">
+    <path d="M600 375 C 470 375 380 300 300 185"/><path d="M600 375 C 730 375 820 300 900 185"/>
+    <path d="M600 375 C 470 375 380 450 300 565"/><path d="M600 375 C 730 375 820 450 900 565"/>
+  </g>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" text-anchor="middle">
+    <g transform="translate(300 185)"><rect x="-120" y="-46" width="240" height="92" rx="12" fill="#fff" stroke="rgba(11,18,32,.10)"/><rect x="-120" y="-46" width="240" height="6" rx="3" fill="url(#g2)"/><text y="6" font-size="24" font-weight="800" fill="#08101a">CRM</text><text y="34" font-size="18" fill="#4b5871">enquiries · deals</text></g>
+    <g transform="translate(900 185)"><rect x="-120" y="-46" width="240" height="92" rx="12" fill="#fff" stroke="rgba(11,18,32,.10)"/><rect x="-120" y="-46" width="240" height="6" rx="3" fill="url(#g)"/><text y="6" font-size="24" font-weight="800" fill="#08101a">Field service</text><text y="34" font-size="18" fill="#4b5871">crews · installs</text></g>
+    <g transform="translate(300 565)"><rect x="-120" y="-46" width="240" height="92" rx="12" fill="#fff" stroke="rgba(11,18,32,.10)"/><rect x="-120" y="-46" width="240" height="6" rx="3" fill="url(#g)"/><text y="6" font-size="24" font-weight="800" fill="#08101a">Calendar</text><text y="34" font-size="18" fill="#4b5871">today · this week</text></g>
+    <g transform="translate(900 565)"><rect x="-120" y="-46" width="240" height="92" rx="12" fill="#fff" stroke="rgba(11,18,32,.10)"/><rect x="-120" y="-46" width="240" height="6" rx="3" fill="url(#g2)"/><text y="6" font-size="24" font-weight="800" fill="#08101a">Inbox</text><text y="34" font-size="18" fill="#4b5871">notes → records</text></g>
+    <g transform="translate(600 375)" filter="url(#s)">
+      <rect x="-190" y="-120" width="380" height="240" rx="16" fill="#fff" stroke="rgba(11,18,32,.10)"/>
+      <rect x="-190" y="-120" width="380" height="8" rx="4" fill="url(#g)"/>
+      <text y="-58" font-size="17" font-weight="800" fill="#0b7d62" letter-spacing="1.5">AI OPERATIONS AGENT</text>
+      <text y="-14" font-size="30" font-weight="900" fill="#08101a">Morning executive brief</text>
+      <g fill="#4b5871" font-size="20" text-anchor="start"><text x="-150" y="30">▸  Pipeline and stale deals</text><text x="-150" y="60">▸  Daily field job schedule</text><text x="-150" y="90">▸  Paid deposits without install dates</text></g>
+    </g>
+  </g>
+</svg>
