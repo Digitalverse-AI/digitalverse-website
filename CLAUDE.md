@@ -35,7 +35,7 @@ Each page is a standalone, self-contained document:
 | `customer-reengagement-case-study.html` | Case study |
 | `solar-installer-ai-operations-case-study.html` | Case study — AI operations agent for a growing solar and electrification installer (client unnamed) |
 | `ai-automation-western-sydney.html` | Service-area page; title/h1 carry "AI automation Western Sydney"; Service + FAQPage schema. `ai-consulting-western-sydney.html` is a redirect stub to it |
-| `ai-automation-blue-mountains.html` | Service-area page for the Blue Mountains (the business is based in Glenbrook). `ai-consulting-blue-mountains.html` is a redirect stub to it |
+| `ai-automation-blue-mountains.html` | Service-area page for the Blue Mountains (lists the Blue Mountains towns served). `ai-consulting-blue-mountains.html` is a redirect stub to it |
 | `ai-readiness.html` | Redirect stub → `/`, preserves query params |
 | `privacy.html` | Privacy policy (`noindex`) |
 | `ai-assessment.html` | Paid-ads landing page (`noindex`), **generated** — never edit by hand; see "Landing pages" below |
@@ -151,11 +151,14 @@ crawler reads. Code identifiers deliberately keep the old name (`assets/snapshot
 - **Phone**: machine-readable fields are E.164 `+61494436113` (`tel:`, schema
   `telephone`, `wa.me/61494436113`). Visible text is `+61 4 94436113`. No other number
   or format anywhere.
-- **Schema** (homepage `ProfessionalService`) mirrors the Google Business Profile
-  exactly: 12 Ross St, Glenbrook NSW 2773, geo, `hasMap`/`sameAs` → Maps CID
-  `15754954551684232246` and LinkedIn `company/131434244`, founder-on-record Vicky De Greyte (`alternateName` Victoria; LinkedIn
-  `in/victoria-de-greyte-5ab94710a`). **Simon De Greyte is deliberately not named anywhere on
-  the site** — not in schema, llms.txt or copy (his decision, 2026-09-14). Do not add him. The street address lives **only** in JSON-LD, never in visible copy.
+- **Location**: no street address, suburb of base, postcode or coordinates anywhere on the site or in
+  schema (owner's request, 2026-09-22). The canonical service-area sentence is *"Working with businesses
+  across Western Sydney, Sydney metro, the Blue Mountains, and remotely across Australia."* — use it
+  verbatim or as a faithful variant wherever the site says where Digitalverse works. Schema carries
+  `areaServed` plus `hasMap`/`sameAs` only (Maps CID `15754954551684232246`, LinkedIn `company/131434244`);
+  no `address` or `geo` object. The homepage `ProfessionalService` names founder-on-record Vicky De Greyte
+  (`alternateName` Victoria; LinkedIn `in/victoria-de-greyte-5ab94710a`). **Simon De Greyte is deliberately
+  not named anywhere on the site** — not in schema, llms.txt or copy (his decision, 2026-09-14). Do not add him.
 - `llms.txt` is the AI-assistant summary; keep its "Key facts for citation" in step with
   the homepage schema and FAQ. It is the source of truth agents are told to check
   claims against — do not add facts to pages that are not in it.
