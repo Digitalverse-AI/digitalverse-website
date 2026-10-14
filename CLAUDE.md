@@ -42,7 +42,7 @@ Each page is a standalone, self-contained document:
 
 Styles are not shared: every page carries its own inline `<style>` block and one or two
 inline `<script>` blocks. Fonts come from Google Fonts (Inter); analytics is inline
-`gtag` (`AW-18217007323`).
+`gtag` (`AW-18217007323`), the HubSpot tracking script and the Meta Pixel (see Analytics).
 
 The one shared file is `assets/snapshot-modal.js` (see below).
 
@@ -85,7 +85,13 @@ Portal `443641127`, form `b4cb8e1e-515b-4c33-85af-15178f877296`, region `ap1`.
 
 ## Analytics and conversion tracking
 
-Two tags on every page except the `ai-readiness.html` redirect stub:
+**Meta Pixel** (id `2306161606848241`, added 2026-10-14): Meta's base code sits at the end of
+`<head>` on every real page and in `landing/_template.html` (so generated landing pages carry it);
+the redirect stubs do not. It fires `PageView` only. The HubSpot form embed exposes no submit event
+to the page, so there is no browser-side `Lead` event — Facebook conversions need a form with a
+thank-you redirect and a pixel event on that page. The privacy notice names the pixel.
+
+Three tags on every real page (the three redirect stubs carry none):
 
 - **Google tag** `AW-18217007323` — Google Ads. There is no GA4 property
   installed, so there is no on-site behaviour or funnel reporting.
@@ -218,7 +224,7 @@ large video externally and embed it rather than committing it.
   customer story, privacy, WhatsApp and email), mobile-first, and embed the existing HubSpot form twice
   (`landing/<slug>.json` → `form.form_id`). They are not in `sitemap.xml` or `llms.txt`.
 - UTM tracking needs nothing in the markup: the HubSpot tracking script stores the full landing URL
-  (including `utm_*`) on the contact. There is no Meta Pixel on the site.
+  (including `utm_*`) on the contact. The Meta Pixel base code is in the template (see Analytics).
 - `.nojekyll` at the repo root stops GitHub Pages running Jekyll, so `{{ }}` in the template can never
   break a deploy.
 
