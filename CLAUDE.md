@@ -34,8 +34,8 @@ Each page is a standalone, self-contained document:
 | `constraint-first-ai-agents.html` | Insight article |
 | `customer-reengagement-case-study.html` | Case study |
 | `solar-installer-ai-operations-case-study.html` | Case study — AI operations agent for a growing solar and electrification installer (client unnamed) |
-| `ai-automation-western-sydney.html` | Service-area page; title/h1 carry "AI automation Western Sydney"; Service + FAQPage schema. `ai-consulting-western-sydney.html` is a redirect stub to it |
-| `ai-automation-blue-mountains.html` | Service-area page for the Blue Mountains (lists the Blue Mountains towns served). `ai-consulting-blue-mountains.html` is a redirect stub to it |
+| `ai-automation-western-sydney.html` | Retired regional page; redirects directly to `/`, preserving query parameters and fragments. The older `ai-consulting-western-sydney.html` alias also redirects directly to `/` |
+| `ai-automation-blue-mountains.html` | Retired regional page; redirects directly to `/`, preserving query parameters and fragments. The older `ai-consulting-blue-mountains.html` alias also redirects directly to `/` |
 | `ai-readiness.html` | Redirect stub → `/`, preserves query params |
 | `privacy.html` | Privacy policy (`noindex`) |
 | `ai-assessment.html` | Paid-ads landing page (`noindex`), **generated** — never edit by hand; see "Landing pages" below |
@@ -159,7 +159,7 @@ crawler reads. Code identifiers deliberately keep the old name (`assets/snapshot
   or format anywhere.
 - **Location**: no street address, suburb of base, postcode or coordinates anywhere on the site or in
   schema (owner's request, 2026-09-22). The canonical service-area sentence is *"Working with businesses
-  across Western Sydney, Sydney metro, the Blue Mountains, and remotely across Australia."* — use it
+  across Greater Sydney, including Western Sydney and the Blue Mountains, and remotely across Australia."* — use it
   verbatim or as a faithful variant wherever the site says where Digitalverse works. Schema carries
   `areaServed` plus `hasMap`/`sameAs` only (Maps CID `15754954551684232246`, LinkedIn `company/131434244`);
   no `address` or `geo` object. The homepage `ProfessionalService` names founder-on-record Vicky De Greyte
@@ -242,3 +242,7 @@ AI crawlers and converters (Cloudflare Markdown for Agents, readability extracto
   verbatim; the homepage node is `@id https://digitalverse.com.au/#organization` and other
   pages' provider/publisher nodes reference it.
 - FAQ questions are `<h3>` inside `<summary>`; every content section has a real heading.
+
+## Homepage update (2026-11-13)
+
+The homepage navigation is What We Do, Customer Stories, About and Blog. The solar installer story sits below the opening focus areas. Greater Sydney and Australia carry green emphasis in the About coverage sentence. Regional pages and their older consulting aliases are redirect stubs, excluded from the sitemap and llms.txt primary pages. Do not reintroduce regional footer links.
